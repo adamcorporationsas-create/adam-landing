@@ -7,6 +7,20 @@
   <title>Asistentes Virtuales con IA | ADAM</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <meta name="theme-color" content="#0a0f1e">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Asistentes Virtuales con IA | ADAM">
+  <meta property="og:description" content="Asistentes Virtuales con IA de ADAM — Atención al cliente 24/7, calificación de leads, operación multicanal y más.">
+  <meta property="og:image" content="https://adam.com.co/assets/images/logo.png">
+  <meta property="og:url" content="https://adam.com.co/servicio-asistentes.html">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Asistentes Virtuales con IA | ADAM">
+  <meta name="twitter:description" content="Asistentes Virtuales con IA — Atención 24/7, calificación de leads, multicanal.">
+
+  <link rel="canonical" href="https://adam.com.co/servicio-asistentes.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -301,16 +315,7 @@
   </a>
 
   <!-- JS -->
-  <script type="module" src="js/i18n.js"></script>
-  <script type="module" src="js/components/navbar.js"></script>
-  <script type="module" src="js/components/animations.js"></script>
-  <script type="module">
-    window.navbar.init();
-    window.animations.init();
-    if (window.i18n) window.i18n.init();
-    document.querySelectorAll('.lang-switcher__btn').forEach(btn => {
-      btn.addEventListener('click', () => window.i18n.setLanguage(btn.dataset.lang));
-    });
-  </script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/service-page.js"></script>
 </body>
 </html>

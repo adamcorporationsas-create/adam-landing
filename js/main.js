@@ -4,6 +4,14 @@
    Con type="module", el DOM ya está parseado cuando ejecuta.
    No necesita DOMContentLoaded. */
 
+// Importar CSS para que Vite los bundlee en producción
+import '../css/reset.css';
+import '../css/variables.css';
+import '../css/layout.css';
+import '../css/components.css';
+import '../css/sections.css';
+import '../css/animations.css';
+
 
 /* ==========================================================================
    FORMULARIO DE CONTACTO

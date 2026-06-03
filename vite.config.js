@@ -13,6 +13,7 @@ export default defineConfig({
         main: path.resolve(__dirname, 'index.html'),
         asistentes: path.resolve(__dirname, 'servicio-asistentes.html'),
         automatizacion: path.resolve(__dirname, 'servicio-automatizacion.html'),
+        'service-page': path.resolve(__dirname, 'js/service-page.js'),
       },
     },
   },
