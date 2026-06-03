@@ -1,0 +1,135 @@
+/* ==========================================================================
+   ANIMATIONS - Scroll reveal con Intersection Observer
+   ========================================================================== */
+
+/* Estado base: visible por defecto (sin JS o si prefiere no animar) */
+[data-aos] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Solo si JS está activo y no prefiere motion-reduced */
+.aos-ready [data-aos] {
+  opacity: 0;
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* --- Variantes: estado invisible --- */
+.aos-ready [data-aos="fade-up"] {
+  transform: translateY(30px);
+}
+
+.aos-ready [data-aos="fade-in"] {
+  transform: none;
+}
+
+.aos-ready [data-aos="scale"] {
+  transform: scale(0.95);
+}
+
+.aos-ready [data-aos="slide-left"] {
+  transform: translateX(-30px);
+}
+
+.aos-ready [data-aos="slide-right"] {
+  transform: translateX(30px);
+}
+
+.aos-ready [data-aos="scale-up"] {
+  transform: scale(0.85);
+}
+
+.aos-ready [data-aos="header-reveal"] {
+  transform: translateY(30px) perspective(800px) rotateX(5deg);
+  transition-duration: 0.7s;
+}
+
+/* --- Estado visible --- */
+.aos-ready [data-aos].aos-visible {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* --- WhatsApp pulse --- */
+@keyframes whatsapp-pulse {
+  0%   { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3); }
+  50%  { box-shadow: 0 4px 28px rgba(37, 211, 102, 0.6); }
+  100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3); }
+}
+
+.aos-ready .whatsapp-float {
+  animation: whatsapp-pulse 2.5s ease-in-out infinite;
+}
+
+.aos-ready .whatsapp-float:hover {
+  animation: none;
+}
+
+/* --- Delays escalonados --- */
+.aos-ready [data-aos-delay="100"] { transition-delay: 0.1s; }
+.aos-ready [data-aos-delay="150"] { transition-delay: 0.15s; }
+.aos-ready [data-aos-delay="200"] { transition-delay: 0.2s; }
+.aos-ready [data-aos-delay="250"] { transition-delay: 0.25s; }
+.aos-ready [data-aos-delay="300"] { transition-delay: 0.3s; }
+.aos-ready [data-aos-delay="400"] { transition-delay: 0.4s; }
+.aos-ready [data-aos-delay="500"] { transition-delay: 0.5s; }
+.aos-ready [data-aos-delay="600"] { transition-delay: 0.6s; }
+.aos-ready [data-aos-delay="800"] { transition-delay: 0.8s; }
+
+/* ===== PROCESO STEPS ===== */
+
+.proceso__step {
+  position: relative;
+  z-index: 1;
+}
+
+.proceso__step::before {
+  content: '';
+  position: absolute;
+  top: var(--space-sm);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 2px solid var(--color-primary);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.proceso__step.aos-visible::before {
+  background: var(--color-primary);
+  box-shadow: 0 0 12px var(--color-primary);
+}
+
+.proceso__number {
+  transition: all 0.4s ease;
+}
+
+.proceso__step:hover .proceso__number {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+/* Card hover lift for all card types */
+.servicio-card,
+.capacidad-card,
+.caso-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Smooth transition for all tilt cards */
+[data-tilt] {
+  transition: transform 0.15s ease-out, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+[data-tilt]:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}

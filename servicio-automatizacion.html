@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Automatización de Procesos con ADAM — ETL, tareas web, reportes automáticos, integración entre sistemas y más.">
+  <title>Automatización de Procesos | ADAM</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/service-page.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link" data-i18n="skip-link">Ir al contenido principal</a>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="ADAM" class="navbar__logo-img">
+        <span class="navbar__logo-text">ADAM</span>
+      </a>
+      <nav class="navbar__nav" id="navbarNav" data-i18n-aria="nav.servicios" aria-label="Navegación principal">
+        <ul class="navbar__links">
+          <li><a href="index.html#servicios" class="navbar__link" data-i18n="nav.servicios">Servicios</a></li>
+          <li><a href="index.html#como-funciona" class="navbar__link" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="index.html#capacidades" class="navbar__link" data-i18n="nav.capacidades">Capacidades</a></li>
+          <li><a href="index.html#casos-de-uso" class="navbar__link" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+          <li><a href="index.html#contacto" class="navbar__link" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="navbar__toggle" id="navbarToggle" data-i18n-aria="nav.toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-switcher__btn lang-switcher__btn--active" data-lang="es" aria-label="Español" data-i18n-aria="lang.es">ES</button>
+        <span class="lang-switcher__divider">/</span>
+        <button class="lang-switcher__btn" data-lang="en" aria-label="English" data-i18n-aria="lang.en">EN</button>
+      </div>
+      <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary navbar__cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+        </svg>
+        <span data-i18n="nav.escribenos">Escríbenos</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- ============================================================
+       HERO DE SERVICIO
+       ============================================================ -->
+  <section class="service-hero">
+    <div class="container service-hero__inner">
+      <a href="index.html#servicios" class="service-hero__back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M19 12H5"/>
+          <path d="M12 19l-7-7 7-7"/>
+        </svg>
+        <span data-i18n="service.hero.back">Volver a servicios</span>
+      </a>
+      <div class="service-hero__content" data-aos="fade-up">
+        <span class="service-hero__tag" data-i18n="service.hero.tag">Servicio</span>
+        <h1 class="service-hero__title" data-i18n="automatizacion.title">Automatización de Procesos</h1>
+        <p class="service-hero__lead" data-i18n="automatizacion.lead">
+          Eliminamos tareas manuales y repetitivas con flujos automáticos, escalables y adaptados a cada negocio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DETALLE DEL SERVICIO
+       ============================================================ -->
+  <section class="service-main">
+    <div class="container">
+      <div class="service-main__inner">
+
+        <!-- Diferenciador -->
+        <div class="service-block service-block--highlight" data-aos="fade-up" data-tilt>
+          <p data-i18n="automatizacion.diferenciador">
+            Transformamos procesos repetitivos y operativos en automatizaciones inteligentes que funcionan de manera autónoma, permitiendo que los equipos se concentren en actividades estratégicas de mayor valor.
+          </p>
+        </div>
+
+        <!-- Servicios principales -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="100">
+          <h2 class="service-block__title" data-i18n="service.block.servicios">Servicios principales</h2>
+          <ul class="service-list service-list--checks">
+            <li data-i18n="automatizacion.item1"><strong>Automatización de procesos manuales</strong> — Gestión de formularios, actualizaciones de registros, validaciones y notificaciones automáticas.</li>
+            <li data-i18n="automatizacion.item2"><strong>Automatización de tareas web</strong> — Acciones en portales web, consultas, registros y extracción de información de plataformas sin API.</li>
+            <li data-i18n="automatizacion.item3"><strong>Procesos ETL</strong> — Extracción, transformación y carga automática de datos entre bases de datos, APIs, hojas de cálculo, CRM y ERP.</li>
+            <li data-i18n="automatizacion.item4"><strong>Descarga automática de documentos</strong> — Obtención y organización automática de facturas, certificados, extractos y reportes críticos.</li>
+            <li data-i18n="automatizacion.item5"><strong>Generación automática de reportes</strong> — Creación y distribución de reportes en Excel, PDF o dashboards con información en tiempo real.</li>
+            <li data-i18n="automatizacion.item6"><strong>Consolidaciones contables y administrativas</strong> — Integración automática de información financiera y operativa de múltiples fuentes.</li>
+          </ul>
+        </div>
+
+        <!-- Beneficios -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="200">
+          <h2 class="service-block__title" data-i18n="service.block.beneficios">Beneficios clave</h2>
+          <div class="service-benefits">
+            <div class="service-benefit" data-tilt>
+              <span class="service-benefit__value" data-i18n="automatizacion.beneficio1.value">-70%</span>
+              <span class="service-benefit__label" data-i18n="automatizacion.beneficio1.label">Reducción de tiempos operativos</span>
+            </div>
+            <div class="service-benefit" data-tilt>
+              <span class="service-benefit__value" data-i18n="automatizacion.beneficio2.value">24/7</span>
+              <span class="service-benefit__label" data-i18n="automatizacion.beneficio2.label">Ejecución continua sin intervención</span>
+            </div>
+            <div class="service-benefit" data-tilt>
+              <span class="service-benefit__value" data-i18n="automatizacion.beneficio3.value">0</span>
+              <span class="service-benefit__label" data-i18n="automatizacion.beneficio3.label">Errores humanos en procesos automatizados</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Casos de uso -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="300">
+          <h2 class="service-block__title" data-i18n="service.block.casos-uso">Casos de uso por área</h2>
+          <div class="service-areas">
+            <div class="service-area" data-tilt>
+              <h3 class="service-area__title" data-i18n="automatizacion.area.finanzas">Finanzas y Contabilidad</h3>
+              <ul class="service-list">
+                <li data-i18n="automatizacion.area.finanzas.item1">Descarga automática de facturas electrónicas</li>
+                <li data-i18n="automatizacion.area.finanzas.item2">Conciliaciones bancarias</li>
+                <li data-i18n="automatizacion.area.finanzas.item3">Alertas tributarias</li>
+                <li data-i18n="automatizacion.area.finanzas.item4">Estados financieros automáticos</li>
+              </ul>
+            </div>
+            <div class="service-area" data-tilt>
+              <h3 class="service-area__title" data-i18n="automatizacion.area.ventas">Ventas y CRM</h3>
+              <ul class="service-list">
+                <li data-i18n="automatizacion.area.ventas.item1">Sincronización de leads</li>
+                <li data-i18n="automatizacion.area.ventas.item2">Actualización automática de embudos comerciales</li>
+                <li data-i18n="automatizacion.area.ventas.item3">Seguimiento de cotizaciones</li>
+                <li data-i18n="automatizacion.area.ventas.item4">Integración e-commerce, CRM y ERP</li>
+              </ul>
+            </div>
+            <div class="service-area" data-tilt>
+              <h3 class="service-area__title" data-i18n="automatizacion.area.correos">Correos y Comunicaciones</h3>
+              <ul class="service-list">
+                <li data-i18n="automatizacion.area.correos.item1">Clasificación automática de correos</li>
+                <li data-i18n="automatizacion.area.correos.item2">Respuestas automáticas</li>
+                <li data-i18n="automatizacion.area.correos.item3">Enrutamiento inteligente de mensajes</li>
+                <li data-i18n="automatizacion.area.correos.item4">Seguimiento de correos sin respuesta</li>
+              </ul>
+            </div>
+            <div class="service-area" data-tilt>
+              <h3 class="service-area__title" data-i18n="automatizacion.area.rrhh">Recursos Humanos</h3>
+              <ul class="service-list">
+                <li data-i18n="automatizacion.area.rrhh.item1">Onboarding automatizado de nuevos colaboradores</li>
+                <li data-i18n="automatizacion.area.rrhh.item2">Gestión de vacaciones y permisos</li>
+                <li data-i18n="automatizacion.area.rrhh.item3">Reportes de productividad</li>
+                <li data-i18n="automatizacion.area.rrhh.item4">Recordatorios de procesos internos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tecnologías -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="400">
+          <h2 class="service-block__title" data-i18n="service.block.tecnologias">Tecnologías utilizadas</h2>
+          <div class="service-tags">
+            <span class="tag">n8n</span>
+            <span class="tag">Make</span>
+            <span class="tag">Python</span>
+            <span class="tag">Playwright</span>
+            <span class="tag">APIs REST y SOAP</span>
+            <span class="tag">Power BI / Looker Studio</span>
+            <span class="tag">Google Workspace / M365</span>
+          </div>
+        </div>
+
+        <!-- Metodología -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="500">
+          <h2 class="service-block__title" data-i18n="service.block.metodologia">Metodología de trabajo</h2>
+          <div class="service-steps">
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">1</span>
+              <span data-i18n="automatizacion.step1">Levantamiento y análisis de procesos</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">2</span>
+              <span data-i18n="automatizacion.step2">Priorización de oportunidades</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">3</span>
+              <span data-i18n="automatizacion.step3">Diseño de la solución</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">4</span>
+              <span data-i18n="automatizacion.step4">Desarrollo e integración</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">5</span>
+              <span data-i18n="automatizacion.step5">Pruebas y validación</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">6</span>
+              <span data-i18n="automatizacion.step6">Implementación en producción</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">7</span>
+              <span data-i18n="automatizacion.step7">Capacitación y documentación</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diferenciadores -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="600">
+          <h2 class="service-block__title" data-i18n="service.porque-adam">¿Por qué ADAM?</h2>
+          <ul class="service-list service-list--checks">
+            <li data-i18n="automatizacion.dif-item1">Soluciones 100% personalizadas a cada negocio</li>
+            <li data-i18n="automatizacion.dif-item2">Conocimiento del contexto empresarial local</li>
+            <li data-i18n="automatizacion.dif-item3">Comunicación directa con el equipo técnico</li>
+            <li data-i18n="automatizacion.dif-item4">Seguridad y confidencialidad de la información</li>
+            <li data-i18n="automatizacion.dif-item5">Acompañamiento continuo después de la implementación</li>
+            <li data-i18n="automatizacion.dif-item6">Resultados medibles y orientados al retorno de inversión</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+       ============================================================ -->
+  <section class="section service-cta">
+    <div class="container">
+      <div class="service-cta__inner" data-aos="fade-up">
+        <h2 class="service-cta__title" data-i18n="automatizacion.cta.title">¿Listo para automatizar tus procesos?</h2>
+        <p class="service-cta__text" data-i18n="automatizacion.cta.text">
+          Eliminá tareas manuales, reducí errores y liberá a tu equipo para lo que realmente importa.
+        </p>
+        <div class="service-cta__actions">
+          <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 8px;">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+            </svg>
+            <span data-i18n="service.cta.whatsapp">Contactanos por WhatsApp</span>
+          </a>
+          <a href="index.html" class="btn btn--outline btn--lg"><span data-i18n="service.cta.back-home">Volver al inicio</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/logo.png" alt="ADAM" width="100" height="34" class="footer__logo">
+          <p class="footer__description" data-i18n="footer.desc">Inteligencia artificial para transformar tu empresa.</p>
+        </div>
+        <div class="footer__links">
+          <h4 class="footer__heading" data-i18n="footer.nav-title">Navegación</h4>
+          <ul>
+            <li><a href="index.html#servicios" data-i18n="nav.servicios">Servicios</a></li>
+            <li><a href="index.html#como-funciona" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+            <li><a href="index.html#capacidades" data-i18n="nav.capacidades">Capacidades</a></li>
+            <li><a href="index.html#casos-de-uso" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+            <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4 class="footer__heading" data-i18n="footer.contacto-title">Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" data-i18n="footer.whatsapp">WhatsApp: +57 321 640 3049</a></li>
+            <li><a href="mailto:adamcorporationsas@gmail.com" data-i18n="footer.email">adamcorporationsas@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 ADAM. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <a href="#hero" class="scroll-top" id="scrollTop" data-i18n-aria="scroll-top.aria" aria-label="Volver al inicio">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </a>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="whatsapp-float" data-i18n-aria="whatsapp.aria" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+    </svg>
+  </a>
+
+  <!-- JS -->
+  <script type="module" src="js/i18n.js"></script>
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/animations.js"></script>
+  <script type="module">
+    window.navbar.init();
+    window.animations.init();
+    if (window.i18n) window.i18n.init();
+    document.querySelectorAll('.lang-switcher__btn').forEach(btn => {
+      btn.addEventListener('click', () => window.i18n.setLanguage(btn.dataset.lang));
+    });
+  </script>
+</body>
+</html>

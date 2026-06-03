@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ADAM — Asistentes virtuales con IA y automatización de procesos empresariales. Transformamos tu empresa con inteligencia artificial.">
+  <title>ADAM — Inteligencia Artificial para tu Empresa</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link" data-i18n="skip-link">Ir al contenido principal</a>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="ADAM" class="navbar__logo-img">
+        <span class="navbar__logo-text">ADAM</span>
+      </a>
+      <nav class="navbar__nav" id="navbarNav" data-i18n-aria="nav.servicios" aria-label="Navegación principal">
+        <ul class="navbar__links">
+          <li><a href="#servicios" class="navbar__link" data-i18n="nav.servicios">Servicios</a></li>
+          <li><a href="#como-funciona" class="navbar__link" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="#capacidades" class="navbar__link" data-i18n="nav.capacidades">Capacidades</a></li>
+          <li><a href="#casos-de-uso" class="navbar__link" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+          <li><a href="#contacto" class="navbar__link" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-switcher__btn lang-switcher__btn--active" data-lang="es" aria-label="Español">ES</button>
+        <span class="lang-switcher__divider">/</span>
+        <button class="lang-switcher__btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary navbar__cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+        </svg>
+        <span data-i18n="nav.escribenos">Escríbenos</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content" data-aos="fade-up">
+        <p class="hero__tag" data-i18n="hero.tag">Inteligencia Artificial para tu empresa</p>
+        <h1 class="hero__title">
+          <span data-i18n="hero.title-before">Transformamos la forma en que tu empresa </span>
+          <span class="hero__highlight" data-i18n="hero.title-highlight">trabaja</span>
+        </h1>
+        <p class="hero__description" data-i18n="hero.desc">
+          Asistentes virtuales inteligentes que atienden, venden, automatizan y optimizan procesos las 24 horas del día.
+        </p>
+        <div class="hero__actions">
+          <a href="index.html#contacto" class="btn btn--primary btn--lg" data-i18n="hero.cta-demo">Solicita una demo</a>
+          <a href="index.html#servicios" class="btn btn--outline btn--lg" data-i18n="hero.cta-servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__video-wrapper">
+          <video class="hero__video" id="heroVideo" preload="auto" playsinline muted>
+            <source src="assets/videos/ADAMVideo.mp4" type="video/mp4">
+          </video>
+
+          <!-- Overlay de play (primera visita) -->
+          <div class="hero__video-overlay" id="heroVideoOverlay">
+            <button class="hero__video-play-btn" id="heroVideoPlayBtn" aria-label="Reproducir video">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              <span>Reproducir con audio</span>
+            </button>
+          </div>
+
+          <!-- Controles -->
+          <div class="hero__video-controls" id="heroVideoControls" hidden>
+            <button class="hero__video-ctrl-btn" id="heroVideoCtrlPlay" aria-label="Pausar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+              </svg>
+            </button>
+            <div class="hero__video-volume">
+              <button class="hero__video-ctrl-btn" id="heroVideoCtrlMute" aria-label="Silenciar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8.5v7a4.49 4.49 0 002.5-3.5z"/>
+                </svg>
+              </button>
+              <input type="range" class="hero__video-volume-slider" id="heroVideoVolume" min="0" max="1" step="0.05" value="1" aria-label="Volumen">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICIOS
+       ============================================================ -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="servicios.label">Servicios</span>
+        <h2 class="section__title" data-i18n="servicios.title">Soluciones de IA para tu negocio</h2>
+        <p class="section__subtitle" data-i18n="servicios.subtitle">
+          Dos líneas de servicio diseñadas para transformar la operación de tu empresa. Hacé clic en cada una para ver todos los detalles.
+        </p>
+      </div>
+
+      <div class="servicios__grid">
+        <a href="servicio-asistentes.html" class="servicio-card" data-aos="slide-left" data-tilt data-aos-delay="100">
+          <div class="servicio-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z"/>
+              <path d="M5 15h14"/>
+              <path d="M19 15v2a3 3 0 01-3 3H8a3 3 0 01-3-3v-2"/>
+            </svg>
+          </div>
+          <h3 class="servicio-card__title" data-i18n="servicios.card1.title">Asistentes Virtuales con IA</h3>
+          <p class="servicio-card__description" data-i18n="servicios.card1.desc">
+            Agentes inteligentes que entienden el contexto, se adaptan a diferentes escenarios y toman decisiones según la información disponible.
+          </p>
+          <ul class="servicio-card__features">
+            <li data-i18n="servicios.card1.feat1">Atención al cliente 24/7</li>
+            <li data-i18n="servicios.card1.feat2">Calificación automática de leads</li>
+            <li data-i18n="servicios.card1.feat3">Operación multicanal y multilingüe</li>
+            <li data-i18n="servicios.card1.feat4">Escalamiento inteligente a humanos</li>
+            <li data-i18n="servicios.card1.feat5">Análisis de datos y reportes</li>
+          </ul>
+          <span class="servicio-card__cta" data-i18n="servicios.card1.cta">Ver información completa →</span>
+        </a>
+
+        <a href="servicio-automatizacion.html" class="servicio-card" data-aos="slide-right" data-tilt data-aos-delay="200">
+          <div class="servicio-card__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M8 12h8"/>
+              <path d="M12 8v8"/>
+              <path d="M3 9h18"/>
+              <path d="M3 15h18"/>
+            </svg>
+          </div>
+          <h3 class="servicio-card__title" data-i18n="servicios.card2.title">Automatización de Procesos</h3>
+          <p class="servicio-card__description" data-i18n="servicios.card2.desc">
+            Eliminamos tareas manuales y repetitivas con flujos automáticos, escalables y adaptados a cada negocio.
+          </p>
+          <ul class="servicio-card__features">
+            <li data-i18n="servicios.card2.feat1">Automatización de tareas web</li>
+            <li data-i18n="servicios.card2.feat2">Procesos ETL y consolidación de datos</li>
+            <li data-i18n="servicios.card2.feat3">Generación automática de reportes</li>
+            <li data-i18n="servicios.card2.feat4">Descarga y organización de documentos</li>
+            <li data-i18n="servicios.card2.feat5">Integración entre sistemas</li>
+          </ul>
+          <span class="servicio-card__cta" data-i18n="servicios.card2.cta">Ver información completa →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CÓMO FUNCIONA
+       ============================================================ -->
+  <section class="section proceso" id="como-funciona">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="proceso.label">Metodología</span>
+        <h2 class="section__title" data-i18n="proceso.title">¿Cómo trabajamos?</h2>
+        <p class="section__subtitle" data-i18n="proceso.subtitle">
+          Un proceso probado para llevar inteligencia artificial a tu empresa.
+        </p>
+      </div>
+
+      <div class="proceso__grid">
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="100">
+          <span class="proceso__number">01</span>
+          <h3 class="proceso__title" data-i18n="proceso.step1.title">Diagnóstico</h3>
+          <p class="proceso__text" data-i18n="proceso.step1.text">Analizamos tus procesos actuales y detectamos oportunidades de mejora.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="200">
+          <span class="proceso__number">02</span>
+          <h3 class="proceso__title" data-i18n="proceso.step2.title">Definición</h3>
+          <p class="proceso__text" data-i18n="proceso.step2.text">Establecemos el alcance y definimos la solución a tu medida.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="300">
+          <span class="proceso__number">03</span>
+          <h3 class="proceso__title" data-i18n="proceso.step3.title">Entrenamiento</h3>
+          <p class="proceso__text" data-i18n="proceso.step3.text">Configuramos y entrenamos el asistente con tu información.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="400">
+          <span class="proceso__number">04</span>
+          <h3 class="proceso__title" data-i18n="proceso.step4.title">Integración</h3>
+          <p class="proceso__text" data-i18n="proceso.step4.text">Conectamos con tus canales y sistemas existentes.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="500">
+          <span class="proceso__number">05</span>
+          <h3 class="proceso__title" data-i18n="proceso.step5.title">Pruebas</h3>
+          <p class="proceso__text" data-i18n="proceso.step5.text">Validamos el funcionamiento y optimizamos los resultados.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="600">
+          <span class="proceso__number">06</span>
+          <h3 class="proceso__title" data-i18n="proceso.step6.title">Entrega</h3>
+          <p class="proceso__text" data-i18n="proceso.step6.text">Ponemos en producción y capacitamos a tu equipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CAPACIDADES / BENEFICIOS
+       ============================================================ -->
+  <section class="section capacidades" id="capacidades">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="capacidades.label">Capacidades</span>
+        <h2 class="section__title" data-i18n="capacidades.title">¿Qué puede hacer ADAM por tu empresa?</h2>
+        <p class="section__subtitle" data-i18n="capacidades.subtitle">
+          Reducimos tiempos operativos, mejoramos la experiencia de clientes y empleados, y escalamos tus procesos con IA.
+        </p>
+      </div>
+
+      <div class="grid-3 capacidades__grid">
+        <div class="capacidad-card" data-aos="slide-left" data-tilt>
+          <div class="capacidad-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card1.title">Atención 24/7</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card1.text">Tus clientes siempre atendidos, sin horarios ni demoras.</p>
+        </div>
+        <div class="capacidad-card" data-aos="scale-up" data-tilt data-aos-delay="200">
+          <div class="capacidad-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20V10"/>
+              <path d="M18 20V4"/>
+              <path d="M6 20v-4"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card2.title">Reducción de costos</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card2.text">Automatizamos tareas repetitivas y liberas a tu equipo para lo importante.</p>
+        </div>
+        <div class="capacidad-card" data-aos="slide-right" data-tilt data-aos-delay="300">
+          <div class="capacidad-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a4 4 0 014 4v2a4 4 0 01-8 0V6a4 4 0 014-4z"/>
+              <path d="M5 15h14"/>
+              <path d="M19 15v2a3 3 0 01-3 3H8a3 3 0 01-3-3v-2"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card3.title">Menos errores</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card3.text">Eliminamos errores humanos en procesos repetitivos y críticos.</p>
+        </div>
+        <div class="capacidad-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="capacidad-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20"/>
+              <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card4.title">Operación multicanal</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card4.text">WhatsApp, web, email y más desde una misma plataforma inteligente.</p>
+        </div>
+        <div class="capacidad-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="capacidad-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card5.title">Escalabilidad</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card5.text">Crece sin necesidad de aumentar tu equipo. La IA escala con vos.</p>
+        </div>
+        <div class="capacidad-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="capacidad-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.21 15.89A10 10 0 118 2.83"/>
+              <path d="M22 12A10 10 0 0012 2v10z"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card6.title">Datos y reportes</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card6.text">Información en tiempo real para tomar mejores decisiones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CASOS DE USO
+       ============================================================ -->
+  <section class="section casos-de-uso" id="casos-de-uso">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="casos.label">Casos de uso</span>
+        <h2 class="section__title" data-i18n="casos.title">Soluciones para cada área</h2>
+        <p class="section__subtitle" data-i18n="casos.subtitle">
+          IA aplicada a los desafíos reales de tu empresa.
+        </p>
+      </div>
+
+      <div class="casos__grid">
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="100">
+          <span class="caso-card__tag" data-i18n="casos.card1.tag">Ventas</span>
+          <h3 class="caso-card__title" data-i18n="casos.card1.title">Calificación de prospectos</h3>
+          <p class="caso-card__text" data-i18n="casos.card1.text">Responde consultas automáticamente, califica leads y da seguimiento a cotizaciones.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="150">
+          <span class="caso-card__tag caso-card__tag--alt" data-i18n="casos.card2.tag">Atención</span>
+          <h3 class="caso-card__title" data-i18n="casos.card2.title">Gestión de PQRS</h3>
+          <p class="caso-card__text" data-i18n="casos.card2.text">Atiende solicitudes, genera tickets de soporte y mide satisfacción al instante.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="200">
+          <span class="caso-card__tag" data-i18n="casos.card3.tag">RR.HH.</span>
+          <h3 class="caso-card__title" data-i18n="casos.card3.title">Onboarding automatizado</h3>
+          <p class="caso-card__text" data-i18n="casos.card3.text">Responde preguntas frecuentes, gestiona vacaciones y acompaña a nuevos colaboradores.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="250">
+          <span class="caso-card__tag caso-card__tag--alt" data-i18n="casos.card4.tag">Finanzas</span>
+          <h3 class="caso-card__title" data-i18n="casos.card4.title">Reportes automáticos</h3>
+          <p class="caso-card__text" data-i18n="casos.card4.text">Descarga facturas, consolida información financiera y genera reportes sin intervención manual.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="300">
+          <span class="caso-card__tag" data-i18n="casos.card5.tag">Proyectos</span>
+          <h3 class="caso-card__title" data-i18n="casos.card5.title">Dashboard en tiempo real</h3>
+          <p class="caso-card__text" data-i18n="casos.card5.text">Seguimiento automático de tareas, alertas de riesgos y generación de actas e informes.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="350">
+          <span class="caso-card__tag caso-card__tag--alt" data-i18n="casos.card6.tag">Operaciones</span>
+          <h3 class="caso-card__title" data-i18n="casos.card6.title">Automatización de procesos</h3>
+          <p class="caso-card__text" data-i18n="casos.card6.text">Elimina tareas manuales, extrae datos de portales web y sincroniza sistemas sin intervención.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TECNOLOGÍAS
+       ============================================================ -->
+  <section class="section tecnologias" id="tecnologias">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="tecnologias.label">Tecnología</span>
+        <h2 class="section__title" data-i18n="tecnologias.title">Stack tecnológico</h2>
+        <p class="section__subtitle" data-i18n="tecnologias.subtitle">
+          Usamos las mejores herramientas del mercado para construir soluciones robustas y escalables.
+        </p>
+      </div>
+
+      <div class="tecnologias__grid">
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="100">
+          <div class="tecnologia-item__logo">
+            <img src="assets/images/tech/openai.svg" alt="OpenAI" width="26" height="26">
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item1.name">GPT</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item1.label">OpenAI</span>
+        </div>
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="150">
+          <div class="tecnologia-item__logo">
+            <img src="assets/images/tech/anthropic.svg" alt="Anthropic" width="26" height="26">
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item2.name">Claude</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item2.label">Anthropic</span>
+        </div>
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="200">
+          <div class="tecnologia-item__logo">
+            <img src="assets/images/tech/n8n.svg" alt="n8n" width="26" height="26">
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item3.name">n8n</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item3.label">Automatización</span>
+        </div>
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="250">
+          <div class="tecnologia-item__logo">
+            <img src="assets/images/tech/make.svg" alt="Make" width="26" height="26">
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item4.name">Make</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item4.label">Integración</span>
+        </div>
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="300">
+          <div class="tecnologia-item__logo">
+            <img src="assets/images/tech/python.svg" alt="Python" width="26" height="26">
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item5.name">Python</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item5.label">Desarrollo</span>
+        </div>
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="350">
+          <div class="tecnologia-item__logo">
+            <img src="assets/images/tech/playwright.svg" alt="Playwright" width="26" height="26">
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item6.name">Playwright</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item6.label">Web automation</span>
+        </div>
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="400">
+          <div class="tecnologia-item__logo">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 4h14l6 6v18H6V4z"/>
+              <path d="M20 4v6h6"/>
+              <circle cx="14" cy="18" r="4"/>
+              <path d="M17 21l3 3"/>
+            </svg>
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item7.name">RAG</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item7.label">Base de conocimiento</span>
+        </div>
+        <div class="tecnologia-item" data-aos="scale-up" data-aos-delay="450">
+          <div class="tecnologia-item__logo">
+            <img src="assets/images/tech/whatsapp.svg" alt="WhatsApp" width="26" height="26">
+          </div>
+          <span class="tecnologia-item__name" data-i18n="tecnologias.item8.name">WhatsApp API</span>
+          <span class="tecnologia-item__label" data-i18n="tecnologias.item8.label">Business</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACTO / CTA
+       ============================================================ -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="contacto__inner">
+        <div class="contacto__content" data-aos="fade-up">
+          <span class="contacto__label" data-i18n="contacto.label">Contacto</span>
+          <h2 class="contacto__title" data-i18n="contacto.title">¿Listo para transformar tu empresa?</h2>
+          <p class="contacto__text" data-i18n="contacto.text">
+            Cuéntanos qué necesitas y te mostramos cómo la inteligencia artificial puede potenciar tu negocio.
+          </p>
+          <div class="contacto__actions">
+            <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 8px;">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+              </svg>
+              <span data-i18n="contacto.whatsapp">Escríbenos por WhatsApp</span>
+            </a>
+          </div>
+          <div class="contacto__details">
+            <div class="contacto__detail-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>adamcorporationsas@gmail.com</span>
+            </div>
+            <div class="contacto__detail-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+57 321 640 3049</span>
+            </div>
+          </div>
+        </div>
+        <div class="contacto__form">
+          <form id="contactForm" action="https://formsubmit.co/ajax/adamcorporationsas@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="150" novalidate>
+            <div class="form__header">
+              <img src="assets/images/logo.png" alt="ADAM" width="90" height="30" class="form__logo" loading="lazy">
+              <p class="form__header-text" data-i18n="contacto.form.header">
+                Cuéntanos tu proyecto y te contactamos a la brevedad.
+              </p>
+            </div>
+            <div class="form__body">
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="nombre" class="form__label" data-i18n="contacto.form.nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" class="form__input" data-i18n-placeholder="contacto.form.nombre-placeholder" placeholder="Tu nombre" autocomplete="name" required>
+                  <span class="form__error" data-i18n="contacto.form.error-nombre">El nombre es obligatorio</span>
+                </div>
+                <div class="form__group">
+                  <label for="email" class="form__label" data-i18n="contacto.form.email">Correo electrónico</label>
+                  <input type="email" id="email" name="email" class="form__input" data-i18n-placeholder="contacto.form.email-placeholder" placeholder="tu@correo.com" autocomplete="email" required>
+                  <span class="form__error" data-i18n="contacto.form.error-email">Ingresá un correo válido</span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="telefono" class="form__label" data-i18n="contacto.form.telefono">Teléfono</label>
+                  <input type="tel" id="telefono" name="telefono" class="form__input" data-i18n-placeholder="contacto.form.telefono-placeholder" placeholder="+57 321 640 3049" autocomplete="tel" required>
+                  <span class="form__error" data-i18n="contacto.form.error-telefono">El teléfono es obligatorio</span>
+                </div>
+                <div class="form__group">
+                  <label for="empresa" class="form__label" data-i18n="contacto.form.empresa">Empresa</label>
+                  <input type="text" id="empresa" name="empresa" class="form__input" data-i18n-placeholder="contacto.form.empresa-placeholder" placeholder="Nombre de tu empresa" autocomplete="organization" required>
+                  <span class="form__error" data-i18n="contacto.form.error-empresa">La empresa es obligatoria</span>
+                </div>
+              </div>
+              <div class="form__group form__group--full">
+                <label for="mensaje" class="form__label" data-i18n="contacto.form.mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" class="form__input form__textarea" rows="3" data-i18n-placeholder="contacto.form.mensaje-placeholder" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                <span class="form__error" data-i18n="contacto.form.error-mensaje">El mensaje no puede estar vacío</span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg btn--full" data-i18n="contacto.form.enviar">Enviar mensaje</button>
+              <p class="form__footnote" data-i18n="contacto.form.footnote">
+                Sin compromiso. Te responderemos a la brevedad.
+              </p>
+            </div>
+          </form>
+          <div id="formSuccess" class="form__success" hidden>
+            <div class="form__success-icon">✓</div>
+            <h3 class="form__success-title" data-i18n="contacto.form.success-title">Mensaje enviado</h3>
+            <p class="form__success-text" data-i18n="contacto.form.success-text">Gracias por contactarnos. Te responderemos a la brevedad.</p>
+            <button type="button" class="btn btn--primary" id="formResetBtn" data-i18n="contacto.form.send-another">Enviar otro mensaje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="assets/images/logo.png" alt="ADAM" width="100" height="34" class="footer__logo" loading="lazy">
+          <p class="footer__description" data-i18n="footer.desc">
+            Inteligencia artificial para transformar tu empresa.
+          </p>
+        </div>
+        <div class="footer__links">
+          <h4 class="footer__heading" data-i18n="footer.nav-title">Navegación</h4>
+          <ul>
+            <li><a href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+            <li><a href="#como-funciona" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+            <li><a href="#capacidades" data-i18n="nav.capacidades">Capacidades</a></li>
+            <li><a href="#casos-de-uso" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+            <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer__contact">
+          <h4 class="footer__heading" data-i18n="footer.contacto-title">Contacto</h4>
+          <ul>
+            <li>
+              <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" data-i18n="footer.whatsapp">
+                WhatsApp: +57 321 640 3049
+              </a>
+            </li>
+            <li>
+              <a href="mailto:adamcorporationsas@gmail.com" data-i18n="footer.email">
+                adamcorporationsas@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 ADAM. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <a href="#hero" class="scroll-top" id="scrollTop" data-i18n-aria="scroll-top.aria" aria-label="Volver al inicio">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </a>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="whatsapp-float" data-i18n-aria="whatsapp.aria" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script type="module" src="js/i18n.js"></script>
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/animations.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

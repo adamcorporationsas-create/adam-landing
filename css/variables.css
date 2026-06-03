@@ -1,0 +1,78 @@
+/* ==========================================================================
+   DESIGN TOKENS - Variables globales del sistema de diseño
+   ========================================================================== */
+
+:root {
+  /* ── Colores principales ── */
+  --color-primary: #00a7ff;
+  --color-primary-dark: #0088cc;
+  --color-primary-light: #e6f7ff;
+
+  /* ── Fondos ── */
+  --color-bg-dark: #0a0f1e;
+  --color-bg-light: #ffffff;
+  --color-bg-alt: #f5f8fc;
+
+  /* ── Texto ── */
+  --color-text: #1a1a2e;
+  --color-text-light: #6b7280;
+  --color-text-on-dark: #e2e8f0;
+
+  /* ── Superficies sobre fondo oscuro ── */
+  --color-surface-dark: rgba(255, 255, 255, 0.04);
+  --color-surface-dark-hover: rgba(255, 255, 255, 0.08);
+  --color-border-dark: rgba(255, 255, 255, 0.1);
+
+  /* ── Acentos ── */
+  --color-accent: #7c3aed;
+  --color-success: #10b981;
+
+  /* ── Tipografía ── */
+  --font-display: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-md: 1.125rem;   /* 18px */
+  --font-size-lg: 1.25rem;    /* 20px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
+  --font-size-4xl: 3rem;      /* 48px */
+
+  --line-height-base: 1.6;
+  --line-height-tight: 1.2;
+
+  /* ── Espaciado (escala de 8px) ── */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 80px;
+  --space-2xl: 120px;
+
+  /* ── Bordes ── */
+  --border-radius-sm: 6px;
+  --border-radius: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-full: 9999px;
+
+  /* ── Sombras ── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-glow: 0 0 20px rgba(0, 167, 255, 0.15);
+
+  /* ── Transiciones ── */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* ── Contenedor ── */
+  --container-max: 1200px;
+  --container-padding: 1.5rem;
+
+  /* ── Navbar ── */
+  --navbar-height: 72px;
+}

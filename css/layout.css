@@ -1,0 +1,123 @@
+/* ==========================================================================
+   LAYOUT - Estructura global, contenedores y grid
+   ========================================================================== */
+
+/* ── Tipografía base ── */
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg-dark);
+  position: relative;
+}
+
+/* Galaxia unificada — cubre toda la página sin costuras entre secciones */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    /* Nebulosa azul principal */
+    radial-gradient(ellipse 800px 500px at 15% 20%, rgba(0, 167, 255, 0.06), transparent 70%),
+    /* Nebulosa violeta */
+    radial-gradient(ellipse 600px 500px at 80% 60%, rgba(124, 58, 237, 0.05), transparent 70%),
+    /* Nebulosa azul secundaria */
+    radial-gradient(ellipse 500px 350px at 50% 75%, rgba(0, 167, 255, 0.03), transparent),
+    /* Nebulosa hero */
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 167, 255, 0.08), transparent),
+    /* Estrellas */
+    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 25% 55%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1.5px 1.5px at 40% 15%, rgba(255,255,255,0.6), transparent),
+    radial-gradient(1px 1px at 55% 70%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 85% 80%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.25), transparent),
+    radial-gradient(1px 1px at 5% 90%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1.5px 1.5px at 60% 45%, rgba(0,167,255,0.7), transparent),
+    radial-gradient(1px 1px at 35% 85%, rgba(124,58,237,0.5), transparent),
+    radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 45% 60%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 10% 30%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 60% 70%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.5px 1.5px at 85% 40%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 35% 15%, rgba(0,167,255,0.6), transparent);
+}
+
+/* ── Contenedor principal ── */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* ── Secciones ── */
+.section {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-xl) 0;
+}
+
+.section__label {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.section__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: var(--space-sm);
+}
+
+.section__subtitle {
+  font-size: var(--font-size-md);
+  color: var(--color-text-light);
+  max-width: 640px;
+}
+
+/* ── Grid de dos columnas ── */
+.grid-2 {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+/* ── Grid de 3 columnas ── */
+.grid-3 {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* ── Media queries ── */
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .section__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section__title {
+    font-size: var(--font-size-4xl);
+  }
+}
