@@ -19,25 +19,8 @@ const contactForm = (() => {
   const form = document.getElementById('contactForm');
 
   const t = (key) => {
-    if (typeof window.i18n !== 'undefined') {
-      const lang = window.i18n.getCurrentLang();
-      let value = {
-        es: {
-          'contacto.form.error-email': 'Ingresá un correo válido',
-          'contacto.form.sending': 'Enviando...',
-          'contacto.form.error-send': 'Ocurrió un error al enviar el mensaje. Por favor, intentá de nuevo.',
-          'contacto.form.success-title': 'Mensaje enviado',
-          'contacto.form.success-text': 'Gracias por contactarnos. Te responderemos a la brevedad.',
-        },
-        en: {
-          'contacto.form.error-email': 'Enter a valid email',
-          'contacto.form.sending': 'Sending...',
-          'contacto.form.error-send': 'An error occurred. Please try again.',
-          'contacto.form.success-title': 'Message sent',
-          'contacto.form.success-text': 'Thank you for contacting us. We\'ll get back to you shortly.',
-        },
-      }[lang];
-      if (value) return value[key] || '';
+    if (typeof window.i18n !== 'undefined' && typeof window.i18n.t === 'function') {
+      return window.i18n.t(key);
     }
     return '';
   };
@@ -93,8 +76,7 @@ const contactForm = (() => {
     if (!isValid) return;
 
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = t('contacto.form.sending') || 'Enviando...';
+    submitBtn.classList.add('btn--loading');
     submitBtn.disabled = true;
 
     try {
@@ -121,9 +103,18 @@ const contactForm = (() => {
       }
     } catch (error) {
       console.error('FormSubmit error:', error);
-      submitBtn.textContent = originalText;
+      submitBtn.classList.remove('btn--loading');
       submitBtn.disabled = false;
-      alert(t('contacto.form.error-send') || 'Ocurrió un error al enviar el mensaje.');
+      // Mostrar el error sin alert()
+      const errorMsg = t('contacto.form.error-send') || 'Ocurrió un error al enviar el mensaje.';
+      const existingToast = document.querySelector('.form-toast');
+      if (existingToast) existingToast.remove();
+      const toast = document.createElement('div');
+      toast.className = 'form-toast';
+      toast.textContent = errorMsg;
+      toast.setAttribute('role', 'alert');
+      form.prepend(toast);
+      setTimeout(() => toast.remove(), 6000);
     }
   };
 

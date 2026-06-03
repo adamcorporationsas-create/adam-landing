@@ -139,6 +139,8 @@ const i18n = (() => {
       'contacto.form.error-empresa': 'La empresa es obligatoria',
       'contacto.form.error-email': 'Ingresá un correo válido',
       'contacto.form.error-mensaje': 'El mensaje no puede estar vacío',
+      'contacto.form.sending': 'Enviando...',
+      'contacto.form.error-send': 'Ocurrió un error al enviar el mensaje. Por favor, intentá de nuevo.',
       'contacto.form.success-title': 'Mensaje enviado',
       'contacto.form.success-text': 'Gracias por contactarnos. Te responderemos a la brevedad.',
       'contacto.form.send-another': 'Enviar otro mensaje',
@@ -397,6 +399,8 @@ const i18n = (() => {
       'contacto.form.error-empresa': 'Company is required',
       'contacto.form.error-email': 'Enter a valid email',
       'contacto.form.error-mensaje': 'Message cannot be empty',
+      'contacto.form.sending': 'Sending...',
+      'contacto.form.error-send': 'An error occurred. Please try again.',
       'contacto.form.success-title': 'Message sent',
       'contacto.form.success-text': 'Thank you for contacting us. We\'ll get back to you shortly.',
       'contacto.form.send-another': 'Send another message',
@@ -609,12 +613,17 @@ const i18n = (() => {
     return localStorage.getItem(STORAGE_KEY) || 'es';
   };
 
+  /** Traduce una clave en el idioma actual */
+  const t = (key) => {
+    return get(key, getCurrentLang());
+  };
+
   const init = () => {
     const lang = getCurrentLang();
     setLanguage(lang);
   };
 
-  const api = { init, setLanguage, getCurrentLang };
+  const api = { init, setLanguage, getCurrentLang, t };
   window.i18n = api;
   return api;
 })();
