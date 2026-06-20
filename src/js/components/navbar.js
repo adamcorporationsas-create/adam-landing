@@ -1,5 +1,5 @@
 /* ==========================================================================
-   NAVBAR - Menú móvil, scroll, cierre al navegar
+   NAVBAR - Menú móvil, scroll, cierre al navegar, dropdown servicios
    ========================================================================== */
 
 const navbar = (() => {
@@ -8,6 +8,7 @@ const navbar = (() => {
   const nav = document.getElementById('navbarNav');
   const links = document.querySelectorAll('.navbar__link');
   let isOpen = false;
+  let currentDropdown = null;
 
   const open = () => {
     navbar.classList.add('navbar--open');
@@ -34,6 +35,7 @@ const navbar = (() => {
     delete document.body.dataset.scrollY;
     window.scrollTo(0, scrollY);
     isOpen = false;
+    closeAllDropdowns();
   };
 
   const toggleMenu = () => {
@@ -50,12 +52,60 @@ const navbar = (() => {
     if (isOpen) close();
   };
 
+  // === DROPDOWN SERVICIOS ===
+  const closeAllDropdowns = () => {
+    document.querySelectorAll('.navbar__item--dropdown.navbar__dropdown--open')
+      .forEach(item => {
+        item.classList.remove('navbar__dropdown--open');
+        const btn = item.querySelector('.navbar__dropdown-toggle');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    currentDropdown = null;
+  };
+
+  const toggleDropdown = (e) => {
+    const btn = e.currentTarget;
+    const item = btn.closest('.navbar__item--dropdown');
+    if (!item) return;
+
+    const isOpen = item.classList.contains('navbar__dropdown--open');
+
+    // Close any other open dropdown first
+    closeAllDropdowns();
+
+    if (!isOpen) {
+      item.classList.add('navbar__dropdown--open');
+      btn.setAttribute('aria-expanded', 'true');
+      currentDropdown = item;
+    }
+    // Stop click from propagating to link
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  // Cerrar dropdown al hacer clic fuera
+  const handleOutsideClick = (e) => {
+    if (!currentDropdown) return;
+    if (!currentDropdown.contains(e.target)) {
+      closeAllDropdowns();
+    }
+  };
+
   const init = () => {
     if (!toggle || !nav) return;
 
     toggle.addEventListener('click', toggleMenu);
     window.addEventListener('scroll', handleScroll, { passive: true });
     links.forEach(link => link.addEventListener('click', handleLinkClick));
+
+    // Inicializar dropdowns
+    const dropdownToggles = document.querySelectorAll('.navbar__dropdown-toggle');
+    dropdownToggles.forEach(btn => {
+      btn.addEventListener('click', toggleDropdown);
+    });
+
+    // Cerrar dropdown al hacer clic fuera
+    document.addEventListener('click', handleOutsideClick);
   };
 
   return { init };

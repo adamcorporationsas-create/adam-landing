@@ -13,25 +13,57 @@ const animations = (() => {
   const initTilt = () => {
     if (prefersReducedMotion()) return;
 
-    document.querySelectorAll('[data-tilt]').forEach((card) => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -6;
-        const rotateY = ((x - centerX) / centerX) * 6;
+    const applyTilt = (card, clientX, clientY) => {
+      const rect = card.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = ((y - centerY) / centerY) * -6;
+      const rotateY = ((x - centerX) / centerX) * 6;
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
+      card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02,1.02,1.02)`;
+    };
+
+    const resetTilt = (card) => {
+      card.style.transform = '';
+    };
+
+    document.querySelectorAll('[data-tilt]').forEach((card) => {
+      let rafId = null;
+
+      // Desktop: mouse — throttled via rAF
+      card.addEventListener('mousemove', (e) => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = requestAnimationFrame(() => {
+          applyTilt(card, e.clientX, e.clientY);
+          rafId = null;
+        });
+      });
+      card.addEventListener('mouseleave', () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+        resetTilt(card);
       });
 
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
+      // Mobile: touch
+      card.addEventListener('touchmove', (e) => {
+        const touch = e.touches[0];
+        if (touch) {
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(() => {
+            applyTilt(card, touch.clientX, touch.clientY);
+            rafId = null;
+          });
+        }
+      }, { passive: true });
+      card.addEventListener('touchend', () => {
+        if (rafId) cancelAnimationFrame(rafId);
+        rafId = null;
+        resetTilt(card);
       });
     });
   };
-
   const init = () => {
     // No animar si el usuario prefiere movimiento reducido
     if (prefersReducedMotion()) {

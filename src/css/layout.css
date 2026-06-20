@@ -59,7 +59,7 @@ body::before {
 .section {
   position: relative;
   z-index: 1;
-  padding: var(--space-xl) 0;
+  padding: var(--space-lg) 0;
 }
 
 .section__label {
@@ -100,7 +100,7 @@ body::before {
 /* ── Media queries ── */
 @media (min-width: 768px) {
   .section {
-    padding: var(--space-2xl) 0;
+    padding: var(--space-xl) 0;
   }
 
   .section__title {

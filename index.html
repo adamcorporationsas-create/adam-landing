@@ -13,14 +13,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="ADAM — Inteligencia Artificial para tu Empresa">
   <meta property="og:description" content="Asistentes virtuales con IA y automatización de procesos empresariales. Transformamos tu empresa con inteligencia artificial.">
-  <meta property="og:image" content="https://adam.com.co/assets/images/logo.png">
-  <meta property="og:url" content="https://adam.com.co">
+  <meta property="og:image" content="https://adamcoia.com/assets/images/logo.png">
+  <meta property="og:url" content="https://adamcoia.com">
   <meta property="og:locale" content="es_ES">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ADAM — Inteligencia Artificial para tu Empresa">
   <meta name="twitter:description" content="Asistentes virtuales con IA y automatización de procesos empresariales.">
 
-  <link rel="canonical" href="https://adam.com.co">
+  <link rel="canonical" href="https://adamcoia.com">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -28,8 +28,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ADAM",
-    "url": "https://adam.com.co",
-    "logo": "https://adam.com.co/assets/images/logo.png",
+    "url": "https://adamcoia.com",
+    "logo": "https://adamcoia.com/assets/images/logo.png",
     "description": "Asistentes virtuales con IA y automatización de procesos empresariales.",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -48,12 +48,12 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "ADAM",
-    "url": "https://adam.com.co",
+    "url": "https://adamcoia.com",
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": "https://adam.com.co/?q={search_term_string}"
+        "urlTemplate": "https://adamcoia.com/?q={search_term_string}"
       },
       "query-input": "required name=search_term_string"
     }
@@ -88,7 +88,20 @@
       </a>
       <nav class="navbar__nav" id="navbarNav" data-i18n-aria="nav.servicios" aria-label="Navegación principal">
         <ul class="navbar__links">
-          <li><a href="#servicios" class="navbar__link" data-i18n="nav.servicios">Servicios</a></li>
+          <li class="navbar__item navbar__item--dropdown">
+            <div class="navbar__dropdown-trigger">
+              <a href="#servicios" class="navbar__link" data-i18n="nav.servicios">Servicios</a>
+              <button class="navbar__dropdown-toggle" data-i18n-aria="nav.dropdown-toggle" aria-label="Abrir submenú" aria-expanded="false">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                  <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <ul class="navbar__dropdown">
+              <li><a href="servicio-asistentes.html" class="navbar__dropdown-link" data-i18n="nav.asistentes">Asistentes Virtuales con IA</a></li>
+              <li><a href="servicio-automatizacion.html" class="navbar__dropdown-link" data-i18n="nav.automatizacion">Automatización de Procesos</a></li>
+            </ul>
+          </li>
           <li><a href="#como-funciona" class="navbar__link" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
           <li><a href="#capacidades" class="navbar__link" data-i18n="nav.capacidades">Capacidades</a></li>
           <li><a href="#casos-de-uso" class="navbar__link" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
@@ -516,7 +529,7 @@
             </div>
             <div class="contacto__detail-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>+57 321 640 3049</span>
+              <span>+57 300 000 0000</span>
             </div>
           </div>
         </div>
@@ -543,9 +556,31 @@
               </div>
               <div class="form__row">
                 <div class="form__group">
-                  <label for="telefono" class="form__label" data-i18n="contacto.form.telefono">Teléfono</label>
-                  <input type="tel" id="telefono" name="telefono" class="form__input" data-i18n-placeholder="contacto.form.telefono-placeholder" placeholder="+57 321 640 3049" autocomplete="tel" required>
-                  <span class="form__error" data-i18n="contacto.form.error-telefono">El teléfono es obligatorio</span>
+                  <label for="telefono" class="form__label">Teléfono</label>
+                  <div class="form__phone-wrapper">
+                    <select class="form__country-code" id="pais" name="pais" aria-label="Código de país">
+                      <option value="+57" selected>🇨🇴 +57</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+52">🇲🇽 +52</option>
+                      <option value="+54">🇦🇷 +54</option>
+                      <option value="+56">🇨🇱 +56</option>
+                      <option value="+51">🇵🇪 +51</option>
+                      <option value="+593">🇪🇨 +593</option>
+                      <option value="+58">🇻🇪 +58</option>
+                      <option value="+591">🇧🇴 +591</option>
+                      <option value="+595">🇵🇾 +595</option>
+                      <option value="+598">🇺🇾 +598</option>
+                      <option value="+506">🇨🇷 +506</option>
+                      <option value="+507">🇵🇦 +507</option>
+                      <option value="+502">🇬🇹 +502</option>
+                      <option value="+503">🇸🇻 +503</option>
+                      <option value="+504">🇭🇳 +504</option>
+                      <option value="+505">🇳🇮 +505</option>
+                      <option value="+34">🇪🇸 +34</option>
+                    </select>
+                    <input type="tel" id="telefono" name="telefono" class="form__input form__input--phone" data-i18n-placeholder="contacto.form.telefono-placeholder" placeholder="300 000 0000" autocomplete="tel" required>
+                  </div>
+                  <span class="form__error" aria-live="polite">El teléfono es obligatorio</span>
                 </div>
                 <div class="form__group">
                   <label for="empresa" class="form__label" data-i18n="contacto.form.empresa">Empresa</label>

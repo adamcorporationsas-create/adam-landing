@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ADAM — Asistentes virtuales con IA y automatización de procesos empresariales. Transformamos tu empresa con inteligencia artificial.">
+  <title>ADAM — Inteligencia Artificial para tu Empresa</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <meta name="theme-color" content="#0a0f1e">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ADAM — Inteligencia Artificial para tu Empresa">
+  <meta property="og:description" content="Asistentes virtuales con IA y automatización de procesos empresariales. Transformamos tu empresa con inteligencia artificial.">
+  <meta property="og:image" content="https://adamcoia.com/assets/images/logo.png">
+  <meta property="og:url" content="https://adamcoia.com">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ADAM — Inteligencia Artificial para tu Empresa">
+  <meta name="twitter:description" content="Asistentes virtuales con IA y automatización de procesos empresariales.">
+
+  <link rel="canonical" href="https://adamcoia.com">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ADAM",
+    "url": "https://adamcoia.com",
+    "logo": "https://adamcoia.com/assets/images/logo.png",
+    "description": "Asistentes virtuales con IA y automatización de procesos empresariales.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+57-321-640-3049",
+      "contactType": "sales",
+      "email": "adamcorporationsas@gmail.com",
+      "availableLanguage": ["Spanish", "English"]
+    },
+    "sameAs": [
+      "https://wa.me/573216403049"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ADAM",
+    "url": "https://adamcoia.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://adamcoia.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link" data-i18n="skip-link">Ir al contenido principal</a>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="ADAM" class="navbar__logo-img">
+        <span class="navbar__logo-text">ADAM</span>
+      </a>
+      <nav class="navbar__nav" id="navbarNav" data-i18n-aria="nav.servicios" aria-label="Navegación principal">
+        <ul class="navbar__links">
+           <li class="navbar__item navbar__item--dropdown">
+             <div class="navbar__dropdown-trigger">
+               <a href="#servicios" class="navbar__link" data-i18n="nav.servicios">Servicios</a>
+               <button class="navbar__dropdown-toggle" data-i18n-aria="nav.dropdown-toggle" aria-label="Abrir submenú" aria-expanded="false">
+                 <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                   <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                 </svg>
+               </button>
+             </div>
+             <ul class="navbar__dropdown">
+               <li><a href="servicio-asistentes.html" class="navbar__dropdown-link" data-i18n="nav.asistentes">Asistentes Virtuales con IA</a></li>
+               <li><a href="servicio-automatizacion.html" class="navbar__dropdown-link" data-i18n="nav.automatizacion">Automatización de Procesos</a></li>
+             </ul>
+           </li>
+          <li><a href="#como-funciona" class="navbar__link" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="#capacidades" class="navbar__link" data-i18n="nav.capacidades">Capacidades</a></li>
+          <li><a href="#casos-de-uso" class="navbar__link" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+          <li><a href="#contacto" class="navbar__link" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-switcher__btn lang-switcher__btn--active" data-lang="es" aria-label="Español">ES</button>
+        <span class="lang-switcher__divider">/</span>
+        <button class="lang-switcher__btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary navbar__cta">
+        <svg role="img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span data-i18n="nav.escribenos">Escríbenos</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <p class="hero__tag" data-i18n="hero.tag">Inteligencia Artificial para tu empresa</p>
+        <h1 class="hero__title">
+          <span data-i18n="hero.title-before">Transformamos la forma en que tu empresa</span>
+          <span class="hero__typewriter-line">
+            <span class="hero__highlight">trabaja</span>
+          </span>
+        </h1>
+        <p class="hero__description" data-i18n="hero.desc">
+          Asistentes virtuales inteligentes que atienden, venden, automatizan y optimizan procesos las 24 horas del día.
+        </p>
+        <div class="hero__actions">
+          <a href="index.html#contacto" class="btn btn--primary btn--lg" data-i18n="hero.cta-demo">Solicita una demo</a>
+          <a href="index.html#servicios" class="btn btn--outline btn--lg" data-i18n="hero.cta-servicios">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="hero__video-wrapper">
+          <video class="hero__video" id="heroVideo" preload="metadata" playsinline>
+            <source src="assets/videos/ADAMVideo.mp4" type="video/mp4">
+          </video>
+
+          <!-- Overlay de play (primera visita) -->
+          <div class="hero__video-overlay" id="heroVideoOverlay">
+            <button class="hero__video-play-btn" id="heroVideoPlayBtn" aria-label="Reproducir video" data-i18n-aria="hero.video.play">
+              <svg width="52" height="52" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              <span data-i18n="hero.video.play">Reproducir con audio</span>
+            </button>
+          </div>
+
+          <!-- Controles -->
+          <div class="hero__video-controls" id="heroVideoControls" hidden>
+            <button class="hero__video-ctrl-btn" id="heroVideoCtrlPlay" aria-label="Pausar" data-i18n-aria="hero.video.pause">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+              </svg>
+            </button>
+            <div class="hero__video-volume">
+              <button class="hero__video-ctrl-btn" id="heroVideoCtrlMute" aria-label="Silenciar" data-i18n-aria="hero.video.mute">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8.5v7a4.49 4.49 0 002.5-3.5z"/>
+                </svg>
+              </button>
+              <input type="range" class="hero__video-volume-slider" id="heroVideoVolume" min="0" max="1" step="0.05" value="1" aria-label="Volumen" data-i18n-aria="hero.video.volume">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICIOS
+       ============================================================ -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="servicios.label">Servicios</span>
+        <h2 class="section__title" data-i18n="servicios.title">Soluciones de IA para tu negocio</h2>
+        <p class="section__subtitle" data-i18n="servicios.subtitle">
+          Dos líneas de servicio diseñadas para transformar la operación de tu empresa. Hacé clic en cada una para ver todos los detalles.
+        </p>
+      </div>
+
+      <div class="servicios__grid">
+        <a href="servicio-asistentes.html" class="servicio-card" data-aos="slide-left" data-tilt data-aos-delay="100">
+          <div class="servicio-card__icon">
+            <svg width="48" height="48" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Chat bubble left (user message) -->
+              <path d="M14 26c0-4.4 3.6-8 8-8h16c4.4 0 8 3.6 8 8v12c0 4.4-3.6 8-8 8h-8l-8 8v-8h-8c-4.4 0-8-3.6-8-8V26z" fill="currentColor" opacity="0.12"/>
+              <path d="M20 28h12M20 34h16M20 40h8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity="0.45"/>
+              <!-- Chat bubble right (bot message) -->
+              <path d="M50 36c0-4.4 3.6-8 8-8h10c4.4 0 8 3.6 8 8v10c0 4.4-3.6 8-8 8h-6l-6 6v-6h-6c-4.4 0-8-3.6-8-8V36z" fill="currentColor" opacity="0.2"/>
+              <path d="M56 40h6M56 46h12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" opacity="0.55"/>
+              <!-- Bot icon below right bubble -->
+              <circle cx="56" cy="62" r="7" fill="currentColor" opacity="0.12"/>
+              <circle cx="53.5" cy="60.5" r="1.3" fill="currentColor"/>
+              <circle cx="58.5" cy="60.5" r="1.3" fill="currentColor"/>
+              <path d="M52 64.5c1.5 1.5 4.5 1.5 6 0" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="servicio-card__title" data-i18n="servicios.card1.title">Asistentes Virtuales con IA</h3>
+          <p class="servicio-card__description" data-i18n="servicios.card1.desc">
+            Agentes inteligentes que entienden el contexto, se adaptan a diferentes escenarios y toman decisiones según la información disponible.
+          </p>
+          <ul class="servicio-card__features">
+            <li data-i18n="servicios.card1.feat1">Atención al cliente 24/7</li>
+            <li data-i18n="servicios.card1.feat2">Calificación automática de leads</li>
+            <li data-i18n="servicios.card1.feat3">Operación multicanal y multilingüe</li>
+            <li data-i18n="servicios.card1.feat4">Escalamiento inteligente a humanos</li>
+            <li data-i18n="servicios.card1.feat5">Análisis de datos y reportes</li>
+          </ul>
+          <span class="servicio-card__cta" data-i18n="servicios.card1.cta">Ver información completa →</span>
+        </a>
+
+        <a href="servicio-automatizacion.html" class="servicio-card" data-aos="slide-right" data-tilt data-aos-delay="200">
+          <div class="servicio-card__icon">
+            <svg width="48" height="48" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Gear -->
+              <circle cx="40" cy="40" r="16" stroke="currentColor" stroke-width="3" opacity="0.3"/>
+              <circle cx="40" cy="40" r="6" fill="currentColor" opacity="0.4"/>
+              <!-- Gear teeth -->
+              <path d="M40 18v6M40 56v6M18 40h6M56 40h6M25.5 25.5l4.2 4.2M50.3 50.3l4.2 4.2M25.5 54.5l4.2-4.2M50.3 29.7l4.2-4.2" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+              <!-- Flow nodes -->
+              <circle cx="14" cy="40" r="5" fill="currentColor" opacity="0.15"/>
+              <circle cx="14" cy="40" r="2" fill="currentColor" opacity="0.5"/>
+              <circle cx="66" cy="40" r="5" fill="currentColor" opacity="0.15"/>
+              <circle cx="66" cy="40" r="2" fill="currentColor" opacity="0.5"/>
+              <!-- Connection arrows -->
+              <path d="M19 40l6 0M55 40l6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+              <path d="M62 36l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+              <path d="M22 36l-4 4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+              <!-- Small data dots -->
+              <circle cx="30" cy="28" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="50" cy="28" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="30" cy="52" r="1.5" fill="currentColor" opacity="0.3"/>
+              <circle cx="50" cy="52" r="1.5" fill="currentColor" opacity="0.3"/>
+            </svg>
+          </div>
+          <h3 class="servicio-card__title" data-i18n="servicios.card2.title">Automatización de Procesos</h3>
+          <p class="servicio-card__description" data-i18n="servicios.card2.desc">
+            Eliminamos tareas manuales y repetitivas con flujos automáticos, escalables y adaptados a cada negocio.
+          </p>
+          <ul class="servicio-card__features">
+            <li data-i18n="servicios.card2.feat1">Automatización de tareas web</li>
+            <li data-i18n="servicios.card2.feat2">Procesos ETL y consolidación de datos</li>
+            <li data-i18n="servicios.card2.feat3">Generación automática de reportes</li>
+            <li data-i18n="servicios.card2.feat4">Descarga y organización de documentos</li>
+            <li data-i18n="servicios.card2.feat5">Integración entre sistemas</li>
+          </ul>
+          <span class="servicio-card__cta" data-i18n="servicios.card2.cta">Ver información completa →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CÓMO FUNCIONA
+       ============================================================ -->
+  <section class="section proceso" id="como-funciona">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="proceso.label">Metodología</span>
+        <h2 class="section__title" data-i18n="proceso.title">¿Cómo trabajamos?</h2>
+        <p class="section__subtitle" data-i18n="proceso.subtitle">
+          Un proceso probado para llevar inteligencia artificial a tu empresa.
+        </p>
+      </div>
+
+      <div class="proceso__grid">
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="100">
+          <span class="proceso__number">01</span>
+          <h3 class="proceso__title" data-i18n="proceso.step1.title">Diagnóstico</h3>
+          <p class="proceso__text" data-i18n="proceso.step1.text">Analizamos tus procesos actuales y detectamos oportunidades de mejora.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="200">
+          <span class="proceso__number">02</span>
+          <h3 class="proceso__title" data-i18n="proceso.step2.title">Definición</h3>
+          <p class="proceso__text" data-i18n="proceso.step2.text">Establecemos el alcance y definimos la solución a tu medida.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="300">
+          <span class="proceso__number">03</span>
+          <h3 class="proceso__title" data-i18n="proceso.step3.title">Entrenamiento</h3>
+          <p class="proceso__text" data-i18n="proceso.step3.text">Configuramos y entrenamos el asistente con tu información.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="400">
+          <span class="proceso__number">04</span>
+          <h3 class="proceso__title" data-i18n="proceso.step4.title">Integración</h3>
+          <p class="proceso__text" data-i18n="proceso.step4.text">Conectamos con tus canales y sistemas existentes.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="500">
+          <span class="proceso__number">05</span>
+          <h3 class="proceso__title" data-i18n="proceso.step5.title">Pruebas</h3>
+          <p class="proceso__text" data-i18n="proceso.step5.text">Validamos el funcionamiento y optimizamos los resultados.</p>
+        </div>
+        <div class="proceso__step" data-aos="scale-up" data-tilt data-aos-delay="600">
+          <span class="proceso__number">06</span>
+          <h3 class="proceso__title" data-i18n="proceso.step6.title">Entrega</h3>
+          <p class="proceso__text" data-i18n="proceso.step6.text">Ponemos en producción y capacitamos a tu equipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CAPACIDADES / BENEFICIOS
+       ============================================================ -->
+  <section class="section capacidades" id="capacidades">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="capacidades.label">Capacidades</span>
+        <h2 class="section__title" data-i18n="capacidades.title">¿Qué puede hacer ADAM por tu empresa?</h2>
+        <p class="section__subtitle" data-i18n="capacidades.subtitle">
+          Reducimos tiempos operativos, mejoramos la experiencia de clientes y empleados, y escalamos tus procesos con IA.
+        </p>
+      </div>
+
+      <div class="grid-3 capacidades__grid">
+        <div class="capacidad-card" data-aos="slide-left" data-tilt>
+          <div class="capacidad-card__icon">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Clock circle -->
+              <circle cx="32" cy="32" r="22" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+              <circle cx="32" cy="32" r="3" fill="currentColor" opacity="0.5"/>
+              <path d="M32 14v18l12 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+              <!-- 24/7 badge -->
+              <rect x="42" y="42" width="18" height="14" rx="7" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="1.2"/>
+              <text x="51" y="52" text-anchor="middle" fill="currentColor" font-size="8" font-weight="800" font-family="system-ui,sans-serif" opacity="0.75">24/7</text>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card1.title">Atención 24/7</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card1.text">Tus clientes siempre atendidos, sin horarios ni demoras.</p>
+        </div>
+        <div class="capacidad-card" data-aos="scale-up" data-tilt data-aos-delay="200">
+          <div class="capacidad-card__icon">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Coin stack (bottom to top) -->
+              <ellipse cx="32" cy="46" rx="12" ry="5" fill="currentColor" opacity="0.06"/>
+              <ellipse cx="32" cy="46" rx="12" ry="5" stroke="currentColor" stroke-width="1.5" opacity="0.2"/>
+              <ellipse cx="32" cy="41" rx="12" ry="5" fill="currentColor" opacity="0.08"/>
+              <ellipse cx="32" cy="41" rx="12" ry="5" stroke="currentColor" stroke-width="1.5" opacity="0.25"/>
+              <ellipse cx="32" cy="36" rx="12" ry="5" fill="currentColor" opacity="0.1"/>
+              <ellipse cx="32" cy="36" rx="12" ry="5" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+              <ellipse cx="32" cy="31" rx="12" ry="5" fill="currentColor" opacity="0.12"/>
+              <ellipse cx="32" cy="31" rx="12" ry="5" stroke="currentColor" stroke-width="1.5" opacity="0.35"/>
+              <!-- Down arrow on top of stack -->
+              <path d="M32 22v-8M28 18l4-4 4 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+              <!-- Percent signs -->
+              <text x="18" y="26" fill="currentColor" font-size="7" font-weight="700" font-family="system-ui,sans-serif" opacity="0.35">%</text>
+              <text x="44" y="28" fill="currentColor" font-size="7" font-weight="700" font-family="system-ui,sans-serif" opacity="0.35">%</text>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card2.title">Reducción de costos</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card2.text">Automatizamos tareas repetitivas y liberas a tu equipo para lo importante.</p>
+        </div>
+        <div class="capacidad-card" data-aos="slide-right" data-tilt data-aos-delay="300">
+          <div class="capacidad-card__icon">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Shield -->
+              <path d="M32 6L12 14v14c0 12 8.6 23.2 20 26 11.4-2.8 20-14 20-26V14L32 6z" stroke="currentColor" stroke-width="2" opacity="0.25"/>
+              <path d="M32 10L16 16.5v12c0 10.2 7 19.6 16 22 9-2.4 16-11.8 16-22v-12L32 10z" fill="currentColor" opacity="0.08"/>
+              <!-- Checkmark -->
+              <path d="M24 34l6 6 12-14" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+              <!-- Target crosshair -->
+              <circle cx="46" cy="20" r="8" stroke="currentColor" stroke-width="1.5" opacity="0.2"/>
+              <circle cx="46" cy="20" r="3" fill="currentColor" opacity="0.3"/>
+              <path d="M46 10v4M46 26v4M36 20h4M52 20h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card3.title">Menos errores</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card3.text">Eliminamos errores humanos en procesos repetitivos y críticos.</p>
+        </div>
+        <div class="capacidad-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="capacidad-card__icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" fill="currentColor" opacity="0.65"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card4.title">WhatsApp Business API</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card4.text">Integración oficial con WhatsApp para atención y ventas desde un solo lugar.</p>
+        </div>
+        <div class="capacidad-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="capacidad-card__icon">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Growth bars -->
+              <rect x="8" y="40" width="8" height="16" rx="2" fill="currentColor" opacity="0.15"/>
+              <rect x="8" y="40" width="8" height="16" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+              <rect x="24" y="30" width="8" height="26" rx="2" fill="currentColor" opacity="0.15"/>
+              <rect x="24" y="30" width="8" height="26" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+              <rect x="40" y="18" width="8" height="38" rx="2" fill="currentColor" opacity="0.15"/>
+              <rect x="40" y="18" width="8" height="38" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+              <!-- Top arrow on last bar -->
+              <path d="M44 12l4 6-4 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+              <!-- Growth nodes -->
+              <circle cx="12" cy="38" r="2" fill="currentColor" opacity="0.5"/>
+              <circle cx="28" cy="28" r="2" fill="currentColor" opacity="0.5"/>
+              <circle cx="44" cy="16" r="2.5" fill="currentColor" opacity="0.6"/>
+              <!-- Connection line -->
+              <path d="M14 38l12-8M30 28l12-10" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.25"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card5.title">Escalabilidad</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card5.text">Crece sin necesidad de aumentar tu equipo. La IA escala contigo.</p>
+        </div>
+        <div class="capacidad-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="capacidad-card__icon">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Brain outline -->
+              <path d="M32 12c-6 0-10 3-10 8 0 2 1 4 2 5-2 1-4 3-4 6 0 3 2 5 4 6-1 1-2 3-2 5 0 5 4 8 10 8s10-3 10-8c0-2-1-4-2-5 2-1 4-3 4-6 0-3-2-5-4-6 1-1 2-3 2-5 0-5-4-8-10-8z" stroke="currentColor" stroke-width="2" opacity="0.2"/>
+              <!-- Document/knowledge nodes -->
+              <rect x="20" y="26" width="10" height="12" rx="2" fill="currentColor" opacity="0.1"/>
+              <rect x="20" y="26" width="10" height="12" rx="2" stroke="currentColor" stroke-width="1.2" opacity="0.25"/>
+              <path d="M23 30h4M23 34h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+              <rect x="36" y="22" width="10" height="12" rx="2" fill="currentColor" opacity="0.1"/>
+              <rect x="36" y="22" width="10" height="12" rx="2" stroke="currentColor" stroke-width="1.2" opacity="0.25"/>
+              <path d="M39 26h4M39 30h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+              <!-- Connection dots -->
+              <circle cx="30" cy="24" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="36" cy="20" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="32" cy="44" r="1.5" fill="currentColor" opacity="0.4"/>
+              <circle cx="40" cy="36" r="1.5" fill="currentColor" opacity="0.4"/>
+              <!-- Connecting lines -->
+              <path d="M31 25l4-3M33 44l5-6" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" opacity="0.2"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-card__title" data-i18n="capacidades.card6.title">Base de conocimiento IA</h3>
+          <p class="capacidad-card__text" data-i18n="capacidades.card6.text">Entrenamos al asistente con tu información para respuestas precisas y en contexto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA INTERMEDIO
+       ============================================================ -->
+  <section class="section cta-intermedio" id="cta-intermedio">
+    <div class="container">
+      <div class="cta-intermedio__inner" data-aos="fade-up">
+        <h2 class="cta-intermedio__title" data-i18n="cta-intermedio.title">¿Qué necesitas para tu empresa?</h2>
+        <p class="cta-intermedio__text" data-i18n="cta-intermedio.text">Conversemos sin compromiso y encontremos la solución perfecta para tu negocio.</p>
+        <div class="cta-intermedio__actions">
+          <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+            <svg role="img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20" style="margin-right: 8px;"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+            <span data-i18n="cta-intermedio.cta">Escríbenos por WhatsApp</span>
+          </a>
+          <a href="#contacto" class="btn btn--outline btn--lg" data-i18n="cta-intermedio.cta-alt">Solicita una demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CASOS DE USO
+       ============================================================ -->
+  <section class="section casos-de-uso" id="casos-de-uso">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="casos.label">Casos de uso</span>
+        <h2 class="section__title" data-i18n="casos.title">Soluciones para cada área</h2>
+        <p class="section__subtitle" data-i18n="casos.subtitle">
+          IA aplicada a los desafíos reales de tu empresa.
+        </p>
+      </div>
+
+      <div class="casos__grid">
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="100">
+          <span class="caso-card__tag" data-i18n="casos.card1.tag">Ventas</span>
+          <h3 class="caso-card__title" data-i18n="casos.card1.title">Acompañamiento Comercial con IA</h3>
+          <p class="caso-card__text" data-i18n="casos.card1.text">Tu asistente virtual califica prospectos, presenta productos y captura oportunidades comerciales en WhatsApp 24/7.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="150">
+          <span class="caso-card__tag caso-card__tag--alt" data-i18n="casos.card2.tag">Atención</span>
+          <h3 class="caso-card__title" data-i18n="casos.card2.title">Atención al Cliente 24/7</h3>
+          <p class="caso-card__text" data-i18n="casos.card2.text">Resuelve consultas al instante, gestiona PQRS y brinda soporte personalizado con IA entrenada en tu negocio.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="200">
+          <span class="caso-card__tag" data-i18n="casos.card3.tag">RR.HH.</span>
+          <h3 class="caso-card__title" data-i18n="casos.card3.title">Gestión Administrativa Automatizada</h3>
+          <p class="caso-card__text" data-i18n="casos.card3.text">Automatiza procesos de onboarding, gestión de documentos y tareas administrativas repetitivas sin intervención manual.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="250">
+          <span class="caso-card__tag caso-card__tag--alt" data-i18n="casos.card4.tag">Finanzas</span>
+          <h3 class="caso-card__title" data-i18n="casos.card4.title">Automatización Financiera</h3>
+          <p class="caso-card__text" data-i18n="casos.card4.text">Extrae datos de facturas y certificados, consolida información contable y genera reportes sin intervención manual.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="300">
+          <span class="caso-card__tag" data-i18n="casos.card5.tag">Proyectos</span>
+          <h3 class="caso-card__title" data-i18n="casos.card5.title">Información Estratégica</h3>
+          <p class="caso-card__text" data-i18n="casos.card5.text">Analiza intereses y patrones de clientes y genera reportes inteligentes para la toma de decisiones informadas.</p>
+        </article>
+        <article class="caso-card" data-aos="fade-up" data-tilt data-aos-delay="350">
+          <span class="caso-card__tag caso-card__tag--alt" data-i18n="casos.card6.tag">Operaciones</span>
+          <h3 class="caso-card__title" data-i18n="casos.card6.title">Automatización de Procesos</h3>
+          <p class="caso-card__text" data-i18n="casos.card6.text">Elimina tareas manuales, extrae y procesa documentos, sincroniza sistemas y automatiza flujos de trabajo completos.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACTO / CTA
+       ============================================================ -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="contacto__inner">
+        <div class="contacto__content" data-aos="fade-up">
+          <span class="contacto__label" data-i18n="contacto.label">Contacto</span>
+          <h2 class="contacto__title" data-i18n="contacto.title">¿Listo para transformar tu empresa?</h2>
+          <p class="contacto__text" data-i18n="contacto.text">
+            Cuéntanos qué necesitas y te mostramos cómo la inteligencia artificial puede potenciar tu negocio.
+          </p>
+          <div class="contacto__actions">
+            <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+              <svg role="img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="20" height="20" style="margin-right: 8px;"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span data-i18n="contacto.whatsapp">Escríbenos por WhatsApp</span>
+            </a>
+          </div>
+          <div class="contacto__details">
+            <div class="contacto__detail-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>adamcorporationsas@gmail.com</span>
+            </div>
+            <div class="contacto__detail-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+57 300 000 0000</span>
+            </div>
+          </div>
+        </div>
+        <div class="contacto__form">
+          <form id="contactForm" action="https://formsubmit.co/ajax/adamcorporationsas@gmail.com" method="POST" data-aos="fade-up" data-aos-delay="150" novalidate>
+            <div class="form__header">
+              <img src="assets/images/logo.png" alt="ADAM" width="90" height="30" class="form__logo" loading="lazy">
+              <p class="form__header-text" data-i18n="contacto.form.header">
+                Cuéntanos tu proyecto y te contactamos a la brevedad.
+              </p>
+            </div>
+            <div class="form__body">
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="nombre" class="form__label" data-i18n="contacto.form.nombre">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" class="form__input" data-i18n-placeholder="contacto.form.nombre-placeholder" placeholder="Tu nombre" autocomplete="name" required>
+                  <span class="form__error" aria-live="polite" data-i18n="contacto.form.error-nombre">El nombre es obligatorio</span>
+                </div>
+                <div class="form__group">
+                  <label for="email" class="form__label" data-i18n="contacto.form.email">Correo electrónico</label>
+                  <input type="email" id="email" name="email" class="form__input" data-i18n-placeholder="contacto.form.email-placeholder" placeholder="tu@correo.com" autocomplete="email" required>
+                  <span class="form__error" aria-live="polite" data-i18n="contacto.form.error-email">Ingresá un correo válido</span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__group">
+                  <label for="telefono" class="form__label" data-i18n="contacto.form.telefono">Teléfono</label>
+                  <div class="form__phone-wrapper">
+                    <select class="form__country-code" id="pais" name="pais" aria-label="Código de país">
+                      <option value="+57" selected>🇨🇴 +57</option>
+                      <option value="+1">🇺🇸 +1</option>
+                      <option value="+52">🇲🇽 +52</option>
+                      <option value="+54">🇦🇷 +54</option>
+                      <option value="+56">🇨🇱 +56</option>
+                      <option value="+51">🇵🇪 +51</option>
+                      <option value="+593">🇪🇨 +593</option>
+                      <option value="+58">🇻🇪 +58</option>
+                      <option value="+591">🇧🇴 +591</option>
+                      <option value="+595">🇵🇾 +595</option>
+                      <option value="+598">🇺🇾 +598</option>
+                      <option value="+506">🇨🇷 +506</option>
+                      <option value="+507">🇵🇦 +507</option>
+                      <option value="+502">🇬🇹 +502</option>
+                      <option value="+503">🇸🇻 +503</option>
+                      <option value="+504">🇭🇳 +504</option>
+                      <option value="+505">🇳🇮 +505</option>
+                      <option value="+34">🇪🇸 +34</option>
+                    </select>
+                    <input type="tel" id="telefono" name="telefono" class="form__input form__input--phone" data-i18n-placeholder="contacto.form.telefono-placeholder" placeholder="300 000 0000" autocomplete="tel" required>
+                  </div>
+                  <span class="form__error" aria-live="polite" data-i18n="contacto.form.error-telefono">El teléfono es obligatorio</span>
+                </div>
+                <div class="form__group">
+                  <label for="empresa" class="form__label" data-i18n="contacto.form.empresa">Empresa</label>
+                  <input type="text" id="empresa" name="empresa" class="form__input" data-i18n-placeholder="contacto.form.empresa-placeholder" placeholder="Nombre de tu empresa" autocomplete="organization" required>
+                  <span class="form__error" aria-live="polite" data-i18n="contacto.form.error-empresa">La empresa es obligatoria</span>
+                </div>
+              </div>
+              <div class="form__group form__group--full">
+                <label for="mensaje" class="form__label" data-i18n="contacto.form.mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" class="form__input form__textarea" rows="3" data-i18n-placeholder="contacto.form.mensaje-placeholder" placeholder="Cuéntanos en qué podemos ayudarte..." required></textarea>
+                  <span class="form__error" aria-live="polite" data-i18n="contacto.form.error-mensaje">El mensaje no puede estar vacío</span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg btn--full" data-i18n="contacto.form.enviar">Enviar mensaje</button>
+              <p class="form__footnote" data-i18n="contacto.form.footnote">
+                Sin compromiso. Te responderemos a la brevedad.
+              </p>
+            </div>
+          </form>
+          <div id="formSuccess" class="form__success" hidden>
+            <div class="form__success-icon">✓</div>
+            <h3 class="form__success-title" data-i18n="contacto.form.success-title">Mensaje enviado</h3>
+            <p class="form__success-text" data-i18n="contacto.form.success-text">Gracias por contactarnos. Te responderemos a la brevedad.</p>
+            <button type="button" class="btn btn--primary" id="formResetBtn" data-i18n="contacto.form.send-another">Enviar otro mensaje</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       EMPRESAS (Carrusel horizontal)
+       ============================================================ -->
+  <section class="section empresas" id="empresas">
+    <div class="container">
+      <div class="section__header" data-aos="header-reveal">
+        <span class="section__label" data-i18n="empresas.label">Empresas que confían</span>
+        <h2 class="section__title" data-i18n="empresas.title">Ya confían en ADAM</h2>
+      </div>
+      <div class="empresas__wrapper" data-aos="fade-up">
+        <div class="empresas__track" id="empresasTrack">
+          <!-- Primer juego de tarjetas -->
+          <div class="empresa-card">
+            <div class="empresa-card__logo">
+              <img src="assets/images/empresas/artesanias-marulana.jpg" alt="Artesanías Marulana" loading="lazy">
+            </div>
+            <div class="empresa-card__info">
+              <span class="empresa-card__name" data-i18n="empresas.card1.name">Artesanías Marulana</span>
+              <span class="empresa-card__industry" data-i18n="empresas.card1.industry">Artesanías</span>
+            </div>
+          </div>
+          <a href="#contacto" class="empresa-card empresa-card--placeholder">
+            <div class="empresa-card__logo empresa-card__logo--letter">+</div>
+            <div class="empresa-card__info">
+              <span class="empresa-card__name" data-i18n="empresas.placeholder">Tu empresa aquí</span>
+            </div>
+          </a>
+          <!-- Duplicado para loop infinito -->
+          <div class="empresa-card">
+            <div class="empresa-card__logo">
+              <img src="assets/images/empresas/artesanias-marulana.jpg" alt="Artesanías Marulana" loading="lazy">
+            </div>
+            <div class="empresa-card__info">
+              <span class="empresa-card__name" data-i18n="empresas.card1.name">Artesanías Marulana</span>
+              <span class="empresa-card__industry" data-i18n="empresas.card1.industry">Artesanías</span>
+            </div>
+          </div>
+          <a href="#contacto" class="empresa-card empresa-card--placeholder">
+            <div class="empresa-card__logo empresa-card__logo--letter">+</div>
+            <div class="empresa-card__info">
+              <span class="empresa-card__name" data-i18n="empresas.placeholder">Tu empresa aquí</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <!-- 1/3 - Brand -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__brand-logo">
+            <img src="assets/images/logo.png" alt="ADAM" class="footer__logo-img" loading="lazy">
+            <span class="footer__brand-name">ADAM</span>
+          </a>
+          <p class="footer__description" data-i18n="footer.desc">
+            Inteligencia artificial para transformar tu empresa.
+          </p>
+        </div>
+
+        <!-- 2/3 - Nav + Social -->
+        <div class="footer__right">
+          <div class="footer__links">
+            <h4 class="footer__heading" data-i18n="footer.nav-title">Navegación</h4>
+            <ul>
+              <li><a href="#servicios" data-i18n="nav.servicios">Servicios</a></li>
+              <li><a href="#como-funciona" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+              <li><a href="#capacidades" data-i18n="nav.capacidades">Capacidades</a></li>
+              <li><a href="#casos-de-uso" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+              <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <h4 class="footer__heading" data-i18n="footer.contacto-title">Contacto</h4>
+            <div class="footer__social-icons">
+              <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="WhatsApp">
+                <svg role="img" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://www.linkedin.com/in/adam-corporation-sas-46614938b/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/adam_chat_ia/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 ADAM. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <a href="#hero" class="scroll-top" id="scrollTop" data-i18n-aria="scroll-top.aria" aria-label="Volver al inicio">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </a>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="whatsapp-float" data-i18n-aria="whatsapp.aria" aria-label="Contactar por WhatsApp">
+    <svg role="img" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="28" height="28"><title>WhatsApp</title><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- JavaScript -->
+  <script type="module" src="js/i18n.js"></script>
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/animations.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import heroGSAP from './js/hero-gsap.js';
+    import hero3D from './js/hero-3d.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      heroGSAP.init();
+      hero3D.init();
+    });
+  </script>
+</body>
+</html>

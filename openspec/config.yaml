@@ -1,0 +1,56 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Proyecto: ADAM Landing Page — sitio corporativo de ADAM, empresa de IA y automatización.
+  Stack: HTML5, CSS3, vanilla JS, Vite 8 (build tool only). ES modules.
+  Páginas: index.html, servicio-asistentes.html, servicio-automatizacion.html.
+  Idioma: español (Argentina).
+  Sin framework frontend, sin testing, sin linter, type checker ni formatter.
+  Convenciones: CSS atómico por componentes (reset, variables, layout, components, sections, animations), JS modular con i18n embebido.
+
+strict_tdd: false
+
+testing:
+  runner: none
+  layers:
+    unit: false
+    integration: false
+    e2e: false
+  coverage: false
+  quality:
+    linter: false
+    type_checker: false
+    formatter: false
+  note: >
+    No se detectó test runner, dependencias de testing, linter, type checker ni formatter.
+    Strict TDD deshabilitado. Cualquier cambio debe validarse manualmente en navegador.
+
+rules:
+  proposal:
+    - Incluir alcance claro y criterios de éxito sin tests automatizados
+  specs:
+    - Usar Given/When/Then para escenarios
+    - Usar RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Incluir diagramas de flujo para lógica compleja
+    - Documentar decisiones de arquitectura con fundamento
+  tasks:
+    - Agrupar por fase, usar numeración jerárquica
+    - Mantener tareas completables en una sesión
+  apply:
+    - Seguir patrones existentes del código
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: "npx vite build"
+    coverage_threshold: 0
+  archive:
+    - Advertir antes de mergear deltas destructivos
+
+execution_mode: interactive
+artifact_store:
+  mode: openspec
+delivery_strategy: ask-always
+review_budget_lines: 400

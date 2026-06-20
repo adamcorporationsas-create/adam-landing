@@ -12,6 +12,8 @@ import '../css/components.css';
 import '../css/sections.css';
 import '../css/animations.css';
 
+import typewriter from './typewriter.js';
+
 
 /* ==========================================================================
    FORMULARIO DE CONTACTO
@@ -43,6 +45,10 @@ const contactForm = (() => {
 
   const clearError = (input) => {
     input.classList.remove('form__input--error');
+    const errorEl = input.parentElement.querySelector('.form__error');
+    if (errorEl) {
+      errorEl.textContent = '';
+    }
   };
 
   const validateField = (input) => {
@@ -153,6 +159,11 @@ const contactForm = (() => {
         form.querySelectorAll('.form__input--error').forEach((el) => {
           el.classList.remove('form__input--error');
         });
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.classList.remove('btn--loading');
+          submitBtn.disabled = false;
+        }
       });
     }
   };
@@ -181,13 +192,21 @@ document.querySelectorAll('.lang-switcher__btn').forEach((btn) => {
 // Formulario
 contactForm.init();
 
-// Hero: navegación real con recarga de página
+// Typewriter en el hero
+typewriter.init();
+
+// Hero: navegación sin recarga forzada
 document.querySelectorAll('.hero__actions a').forEach((link) => {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     const href = link.getAttribute('href');
     const [path, hash] = href.split('#');
-    location.replace(path + '?_=' + Date.now() + '#' + hash);
+    if (path === location.pathname.replace(/\/$/, '') || path === '') {
+      // Misma página — scroll suave
+      location.hash = hash;
+    } else {
+      location.href = href;
+    }
   });
 });
 
@@ -214,25 +233,78 @@ const initHeroVideo = () => {
   const volumeSlider = document.getElementById('heroVideoVolume');
   if (!video) return;
 
-  // Reproducir con audio (quitar muted)
-  const playWithAudio = () => {
-    video.muted = false;
+  let hasPlayedOnce = false;
+
+  // Autoplay al cargar: intentar con audio (solo la primera vez)
+  const tryAutoplay = () => {
     video.play().then(() => {
       overlay.classList.add('hero__video-overlay--hidden');
       controls.hidden = false;
       updatePlayIcon(false);
+      hasPlayedOnce = true; // sonó la primera vez
     }).catch(() => {
-      // Si falla, seguir muteado
+      // Browser bloqueó autoplay con audio → muteado pero sin overlay
       video.muted = true;
-      video.play();
+      video.play().then(() => {
+        overlay.classList.add('hero__video-overlay--hidden');
+        controls.hidden = false;
+        updatePlayIcon(false);
+      }).catch(() => {
+        // Browser bloqueó todo autoplay → dejamos el overlay visible
+      });
     });
   };
 
-  // Click en overlay → play con audio
+  // Click en overlay → si es la primera interacción, intenta con audio
+  const playWithAudio = (e) => {
+    if (e) e.stopPropagation();
+    if (!hasPlayedOnce) {
+      video.muted = false; // primera vez con gesto del usuario → puede sonar
+    }
+    video.play().then(() => {
+      overlay.classList.add('hero__video-overlay--hidden');
+      controls.hidden = false;
+      updatePlayIcon(false);
+      hasPlayedOnce = true;
+    }).catch(() => {});
+  };
+
   overlay.addEventListener('click', playWithAudio);
-  playBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    playWithAudio();
+  playBtn.addEventListener('click', playWithAudio);
+
+  // Arranque automático
+  tryAutoplay();
+
+  // Pausar al hacer scroll fuera de vista
+  const videoWrapper = video.closest('.hero__video-wrapper') || video.parentElement;
+  let wasPlaying = false;
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        // Video no visible → pausar
+        wasPlaying = !video.paused;
+        if (!video.paused) {
+          video.pause();
+          updatePlayIcon(true);
+        }
+      } else if (wasPlaying) {
+        // Video vuelve a ser visible → reanudar muteado (ya sonó la primera vez)
+        if (hasPlayedOnce) video.muted = true;
+        video.play().then(() => updatePlayIcon(false)).catch(() => {});
+        wasPlaying = false;
+      }
+    });
+  }, { threshold: 0.3 });
+  scrollObserver.observe(videoWrapper);
+
+  // Al volver de otra página (bfcache): si ya sonó, muteado
+  window.addEventListener('pageshow', (e) => {
+    if (e.persisted && hasPlayedOnce) {
+      video.muted = true;
+      if (video.paused) {
+        video.play().catch(() => {});
+      }
+    }
   });
 
   // Play / Pause
@@ -250,7 +322,7 @@ const initHeroVideo = () => {
     ctrlPlay.innerHTML = paused
       ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>'
       : '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>';
-    ctrlPlay.setAttribute('aria-label', paused ? 'Reproducir' : 'Pausar');
+    ctrlPlay.setAttribute('aria-label', window.i18n.t(paused ? 'hero.video.play' : 'hero.video.pause'));
   };
 
   // Volumen
@@ -274,7 +346,7 @@ const initHeroVideo = () => {
     ctrlMute.innerHTML = muted
       ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.796 8.796 0 0021 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 003.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>'
       : '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8.5v7a4.49 4.49 0 002.5-3.5z"/></svg>';
-    ctrlMute.setAttribute('aria-label', muted ? 'Activar sonido' : 'Silenciar');
+    ctrlMute.setAttribute('aria-label', window.i18n.t(muted ? 'hero.video.unmute' : 'hero.video.mute'));
     volumeSlider.value = muted ? '0' : video.volume;
   };
 

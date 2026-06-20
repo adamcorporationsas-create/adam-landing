@@ -96,7 +96,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--color-bg);
+  background: transparent;
   border: 2px solid var(--color-primary);
   transition: all 0.5s ease;
   z-index: 2;
@@ -132,4 +132,27 @@
 
 [data-tilt]:hover {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ===== TYPEWRITER ===== */
+
+.typewriter {
+  display: inline;
+  position: relative;
+}
+
+.typewriter__cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  background: var(--color-primary);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: cursorBlink 0.8s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }

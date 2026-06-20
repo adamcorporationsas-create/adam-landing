@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Automatización de Procesos con ADAM — ETL, tareas web, reportes automáticos, integración entre sistemas y más.">
+  <title>Automatización de Procesos | ADAM</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <meta name="theme-color" content="#0a0f1e">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Automatización de Procesos | ADAM">
+  <meta property="og:description" content="Automatización de Procesos con ADAM — ETL, tareas web, reportes automáticos, integración entre sistemas y más.">
+  <meta property="og:image" content="https://adamcoia.com/assets/images/logo.png">
+  <meta property="og:url" content="https://adamcoia.com/servicio-automatizacion.html">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Automatización de Procesos | ADAM">
+  <meta name="twitter:description" content="Automatización de Procesos — ETL, tareas web, reportes automáticos, integración.">
+
+  <link rel="canonical" href="https://adamcoia.com/servicio-automatizacion.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Automatización de Procesos",
+    "provider": {
+      "@type": "Organization",
+      "name": "ADAM",
+      "url": "https://adamcoia.com",
+      "logo": "https://adamcoia.com/assets/images/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+57-321-640-3049",
+        "contactType": "sales",
+        "email": "adamcorporationsas@gmail.com",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    },
+    "description": "Automatización de Procesos con ADAM — ETL, tareas web, reportes automáticos, integración entre sistemas y más.",
+    "url": "https://adamcoia.com/servicio-automatizacion.html",
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ADAM",
+    "url": "https://adamcoia.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://adamcoia.com/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/service-page.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link" data-i18n="skip-link">Ir al contenido principal</a>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="assets/images/logo.png" alt="ADAM" class="navbar__logo-img">
+        <span class="navbar__logo-text">ADAM</span>
+      </a>
+      <nav class="navbar__nav" id="navbarNav" data-i18n-aria="nav.servicios" aria-label="Navegación principal">
+        <ul class="navbar__links">
+          <li class="navbar__item navbar__item--dropdown">
+            <div class="navbar__dropdown-trigger">
+              <a href="index.html#servicios" class="navbar__link" data-i18n="nav.servicios">Servicios</a>
+              <button class="navbar__dropdown-toggle" data-i18n-aria="nav.dropdown-toggle" aria-label="Abrir submenú" aria-expanded="false">
+                <svg width="12" height="8" viewBox="0 0 12 8" fill="none" aria-hidden="true">
+                  <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <ul class="navbar__dropdown">
+              <li><a href="servicio-asistentes.html" class="navbar__dropdown-link" data-i18n="nav.asistentes">Asistentes Virtuales con IA</a></li>
+              <li><a href="servicio-automatizacion.html" class="navbar__dropdown-link" data-i18n="nav.automatizacion">Automatización de Procesos</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#como-funciona" class="navbar__link" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+          <li><a href="index.html#capacidades" class="navbar__link" data-i18n="nav.capacidades">Capacidades</a></li>
+          <li><a href="index.html#casos-de-uso" class="navbar__link" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+          <li><a href="index.html#contacto" class="navbar__link" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button class="navbar__toggle" id="navbarToggle" data-i18n-aria="nav.toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      <div class="lang-switcher">
+        <button class="lang-switcher__btn lang-switcher__btn--active" data-lang="es" aria-label="Español" data-i18n-aria="lang.es">ES</button>
+        <span class="lang-switcher__divider">/</span>
+        <button class="lang-switcher__btn" data-lang="en" aria-label="English" data-i18n-aria="lang.en">EN</button>
+      </div>
+      <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary navbar__cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        <span data-i18n="nav.escribenos">Escríbenos</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- ============================================================
+       HERO DE SERVICIO
+       ============================================================ -->
+  <section class="service-hero">
+    <div class="container service-hero__inner">
+      <a href="index.html#servicios" class="service-hero__back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M19 12H5"/>
+          <path d="M12 19l-7-7 7-7"/>
+        </svg>
+        <span data-i18n="service.hero.back">Volver a servicios</span>
+      </a>
+      <div class="service-hero__content" data-aos="fade-up">
+        <span class="service-hero__tag" data-i18n="service.hero.tag">Servicio</span>
+        <h1 class="service-hero__title" data-i18n="automatizacion.title">Automatización de Procesos</h1>
+        <p class="service-hero__lead" data-i18n="automatizacion.lead">
+          Eliminamos tareas manuales y repetitivas con flujos automáticos, escalables y adaptados a cada negocio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INTRODUCCIÓN
+       ============================================================ -->
+  <section class="service-intro">
+    <div class="container">
+      <div class="service-intro__inner" data-aos="fade-up">
+        <h2 class="service-intro__title" data-i18n="automatizacion.intro.title">Automatización que transforma tu operación</h2>
+        <p class="service-intro__text" data-i18n="automatizacion.intro.text">
+          Transformamos tareas manuales y repetitivas en procesos automáticos, eficientes y escalables. Menos errores, más velocidad y un equipo liberado para lo que realmente importa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       DETALLE DEL SERVICIO
+       ============================================================ -->
+  <section class="service-main">
+    <div class="container">
+      <div class="service-main__inner">
+
+        <!-- Portafolio de Servicios -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="100">
+          <h2 class="service-block__title" data-i18n="automatizacion.portfolio.title">Portafolio de Servicios</h2>
+          <div class="service-portfolio">
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">📄</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item1.title">Extracción de información</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item1.text">Extraemos información estructurada desde documentos, facturas, certificados y cualquier tipo de archivo.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">🌐</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item2.title">Procesamiento web</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item2.text">Procesamos información obtenida de internet y fuentes web para alimentar tus sistemas.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">🧮</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item3.title">Cálculos y operaciones lógicas</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item3.text">Realizamos cálculos automáticos y operaciones lógicas sobre los datos procesados.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">🗄️</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item4.title">Gestión de bases de datos</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item4.text">Leemos y modificamos registros en bases de datos para mantener tu información siempre actualizada.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">📊</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item5.title">Análisis y conclusiones</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item5.text">Analizamos información y generamos conclusiones automáticas para la toma de decisiones.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">📁</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item6.title">Gestión de archivos</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item6.text">Administramos, organizamos y procesamos archivos y carpetas de forma automática.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">📧</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item7.title">Correos electrónicos</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item7.text">Leemos, redactamos y enviamos correos electrónicos con archivos adjuntos automáticamente.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">📝</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item8.title">Formularios automáticos</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item8.text">Completamos formularios web y sistemas de forma automática sin intervención manual.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">🔄</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item9.title">Transferencia entre sistemas</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item9.text">Transferimos datos entre diferentes sistemas sin integraciones complejas ni errores manuales.</p>
+              </div>
+            </div>
+            <div class="service-portfolio__item" data-tilt>
+              <div class="service-portfolio__icon">💻</div>
+              <div class="service-portfolio__content">
+                <h3 class="service-portfolio__item-title" data-i18n="automatizacion.portfolio.item10.title">Automatización de software</h3>
+                <p class="service-portfolio__item-text" data-i18n="automatizacion.portfolio.item10.text">Operamos aplicaciones web y software empresarial mediante automatización robótica de procesos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Propuesta de Valor -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="200">
+          <h2 class="service-block__title" data-i18n="automatizacion.propuesta.title">Propuesta de Valor</h2>
+          <div class="service-propuesta">
+            <div class="service-propuesta__item" data-tilt>
+              <div class="service-propuesta__icon">🎯</div>
+              <h3 class="service-propuesta__item-title" data-i18n="automatizacion.propuesta.item1.title">Adaptadas a cada cliente</h3>
+              <p class="service-propuesta__item-text" data-i18n="automatizacion.propuesta.item1.text">Los servicios se diseñan para adaptarse a las necesidades específicas de cada cliente, integrándose con sus plataformas, bases de datos y sistemas empresariales.</p>
+            </div>
+            <div class="service-propuesta__item" data-tilt>
+              <div class="service-propuesta__icon">⚡</div>
+              <h3 class="service-propuesta__item-title" data-i18n="automatizacion.propuesta.item2.title">Mayor eficiencia operativa</h3>
+              <p class="service-propuesta__item-text" data-i18n="automatizacion.propuesta.item2.text">La implementación permite mejorar la eficiencia operativa y aumentar la capacidad de respuesta de las organizaciones.</p>
+            </div>
+            <div class="service-propuesta__item" data-tilt>
+              <div class="service-propuesta__icon">🚀</div>
+              <h3 class="service-propuesta__item-title" data-i18n="automatizacion.propuesta.item3.title">Transformación digital</h3>
+              <p class="service-propuesta__item-text" data-i18n="automatizacion.propuesta.item3.text">Las soluciones fortalecen los procesos de transformación digital de las organizaciones, llevándolas al siguiente nivel.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metodología -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="300">
+          <h2 class="service-block__title" data-i18n="service.block.metodologia">Metodología de trabajo</h2>
+          <div class="service-steps">
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">1</span>
+              <span data-i18n="automatizacion.step1">Levantamiento y análisis de procesos</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">2</span>
+              <span data-i18n="automatizacion.step2">Priorización de oportunidades</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">3</span>
+              <span data-i18n="automatizacion.step3">Diseño de la solución</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">4</span>
+              <span data-i18n="automatizacion.step4">Desarrollo e integración</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">5</span>
+              <span data-i18n="automatizacion.step5">Pruebas y validación</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">6</span>
+              <span data-i18n="automatizacion.step6">Implementación en producción</span>
+            </div>
+            <div class="service-step" data-tilt>
+              <span class="service-step__num">7</span>
+              <span data-i18n="automatizacion.step7">Capacitación y documentación</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- ¿Por qué ADAM? -->
+        <div class="service-block" data-aos="fade-up" data-tilt data-aos-delay="400">
+          <h2 class="service-block__title" data-i18n="service.porque-adam">¿Por qué ADAM?</h2>
+          <ul class="service-list service-list--checks">
+            <li data-i18n="automatizacion.dif-item1">Soluciones 100% personalizadas a cada negocio</li>
+            <li data-i18n="automatizacion.dif-item2">Conocimiento del contexto empresarial local</li>
+            <li data-i18n="automatizacion.dif-item3">Comunicación directa con el equipo técnico</li>
+            <li data-i18n="automatizacion.dif-item4">Seguridad y confidencialidad de la información</li>
+            <li data-i18n="automatizacion.dif-item5">Acompañamiento continuo después de la implementación</li>
+            <li data-i18n="automatizacion.dif-item6">Resultados medibles y orientados al retorno de inversión</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+       ============================================================ -->
+  <section class="section service-cta">
+    <div class="container">
+      <div class="service-cta__inner" data-aos="fade-up">
+        <h2 class="service-cta__title" data-i18n="automatizacion.cta.title">¿Listo para automatizar tus procesos?</h2>
+        <p class="service-cta__text" data-i18n="automatizacion.cta.text">
+          Eliminá tareas manuales, reducí errores y liberá a tu equipo para lo que realmente importa.
+        </p>
+        <div class="service-cta__actions">
+          <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="margin-right: 8px;">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            <span data-i18n="service.cta.whatsapp">Contactanos por WhatsApp</span>
+          </a>
+          <a href="index.html" class="btn btn--outline btn--lg"><span data-i18n="service.cta.back-home">Volver al inicio</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <!-- 1/3 - Brand -->
+        <div class="footer__brand">
+          <a href="index.html" class="footer__brand-logo">
+            <img src="assets/images/logo.png" alt="ADAM" class="footer__logo-img" loading="lazy">
+            <span class="footer__brand-name">ADAM</span>
+          </a>
+          <p class="footer__description" data-i18n="footer.desc">Inteligencia artificial para transformar tu empresa.</p>
+        </div>
+
+        <!-- 2/3 - Nav + Social -->
+        <div class="footer__right">
+          <div class="footer__links">
+            <h4 class="footer__heading" data-i18n="footer.nav-title">Navegación</h4>
+            <ul>
+              <li><a href="index.html#servicios" data-i18n="nav.servicios">Servicios</a></li>
+              <li><a href="index.html#como-funciona" data-i18n="nav.como-funciona">¿Cómo funciona?</a></li>
+              <li><a href="index.html#capacidades" data-i18n="nav.capacidades">Capacidades</a></li>
+              <li><a href="index.html#casos-de-uso" data-i18n="nav.casos-de-uso">Casos de uso</a></li>
+              <li><a href="index.html#contacto" data-i18n="nav.contacto">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <h4 class="footer__heading" data-i18n="footer.contacto-title">Contacto</h4>
+            <div class="footer__social-icons">
+              <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="WhatsApp">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                <span>WhatsApp</span>
+              </a>
+              <a href="https://www.linkedin.com/in/adam-corporation-sas-46614938b/" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://www.instagram.com/adam_chat_ia/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer.copyright">&copy; 2026 ADAM. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <a href="#hero" class="scroll-top" id="scrollTop" data-i18n-aria="scroll-top.aria" aria-label="Volver al inicio">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </a>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/573216403049" target="_blank" rel="noopener noreferrer" class="whatsapp-float" data-i18n-aria="whatsapp.aria" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- JS -->
+  <script type="module" src="js/i18n.js"></script>
+  <script type="module" src="js/components/navbar.js"></script>
+  <script type="module" src="js/components/animations.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/service-page.js"></script>
+  <script type="module">
+    import hero3D from './js/hero-3d.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      hero3D.init();
+    });
+  </script>
+</body>
+</html>
