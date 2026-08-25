@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { ViteEjsPlugin as ejsPlugin } from 'vite-plugin-ejs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -14,8 +15,12 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'src/index.html'),
         asistentes: path.resolve(__dirname, 'src/servicio-asistentes.html'),
+        citas: path.resolve(__dirname, 'src/servicio-citas.html'),
         automatizacion: path.resolve(__dirname, 'src/servicio-automatizacion.html'),
       },
     },
   },
+  plugins: [
+    ejsPlugin({}),
+  ],
 });

@@ -3,6 +3,7 @@ node_modules/
 
 # Build output
 dist/
+dist.zip
 
 # IDE
 .vscode/
@@ -19,4 +20,7 @@ Thumbs.db
 .env.local
 
 # OpenCode
+.atl/
+
+# Skill registry
 .atl/

@@ -203,6 +203,13 @@
   margin-bottom: var(--space-sm);
 }
 
+.service-area__text {
+  font-size: var(--font-size-base);
+  color: var(--color-text-on-dark);
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
 
 /* ===== BENEFICIOS (automatización) ===== */
 
