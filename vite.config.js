@@ -17,6 +17,7 @@ export default defineConfig({
         asistentes: path.resolve(__dirname, 'src/servicio-asistentes.html'),
         citas: path.resolve(__dirname, 'src/servicio-citas.html'),
         automatizacion: path.resolve(__dirname, 'src/servicio-automatizacion.html'),
+        secop2: path.resolve(__dirname, 'src/servicio-secop2.html'),
       },
     },
   },
