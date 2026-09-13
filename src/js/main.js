@@ -78,7 +78,7 @@ const contactForm = (() => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const inputs = form.querySelectorAll('input[required], textarea[required]');
+    const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
     let isValid = true;
 
     inputs.forEach((input) => {
@@ -104,6 +104,7 @@ const contactForm = (() => {
           email:    document.getElementById('email').value,
           phone:    document.getElementById('telefono').value,
           company:  document.getElementById('empresa').value,
+          service:  document.getElementById('servicio').selectedOptions[0].textContent.trim(),
           message:  document.getElementById('mensaje').value,
         }),
       });
@@ -142,7 +143,7 @@ const contactForm = (() => {
     form.addEventListener('submit', handleSubmit);
     document.addEventListener('languageChanged', handleLanguageChange);
 
-    form.querySelectorAll('.form__input').forEach((input) => {
+    form.querySelectorAll('.form__input, select[required]').forEach((input) => {
       input.addEventListener('input', () => clearError(input));
       input.addEventListener('blur', () => {
         if (input.required) validateField(input);

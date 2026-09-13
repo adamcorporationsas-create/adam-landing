@@ -809,9 +809,21 @@
   background: rgba(255, 255, 255, 0.07);
 }
 
-.form__country-code option {
+.form__country-code option,
+.form__select option {
   background: #111827;
   color: #fff;
+}
+
+.form__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 2.5rem;
+  cursor: pointer;
 }
 
 .form__input--phone {

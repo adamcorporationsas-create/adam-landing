@@ -1,0 +1,17 @@
+# ADAM — Clean URLs (.htaccess)
+# URLs sin .html: /servicio-asistentes sirve servicio-asistentes.html
+# Las URLs viejas con .html redirigen 301 a la versión limpia (SEO).
+
+RewriteEngine On
+
+# 1) index.html -> raíz (301)
+RewriteRule ^index\.html$ / [R=301,L]
+
+# 2) Cualquier otra URL con .html -> versión limpia (301)
+RewriteCond %{THE_REQUEST} \.html[\s?] [NC]
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# 3) URL limpia -> sirve el archivo .html correspondiente (interno, la URL no cambia)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^.]+)$ $1.html [L]
