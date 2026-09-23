@@ -396,6 +396,10 @@ const i18n = (() => {
       'secop2.propuesta.desc': 'NADIE puede revisar los cientos de procesos que se publican a diario en SECOP II. Con el Analista Inteligente de Oportunidades Comerciales de ADAM la inteligencia artificial monitorea por ti y te avisa solo cuando aparece una oportunidad real para tu empresa.',
       'secop2.cta.title': '¿Listo para encontrar tu próxima oportunidad comercial?',
       'secop2.cta.text': 'Deja que el analista inteligente de ADAM monitoree la contratación pública por ti y recibe las alertas en el momento exacto.',
+      'secop2.cta-intermedio.title': 'Prueba el Analista de Oportunidades gratis por 15 días',
+      'secop2.cta-intermedio.text': 'Crea tu cuenta y comienza a recibir alertas, expedientes y respuestas de IA en SECOP II sin ningún costo durante 15 días.',
+      'secop2.cta-intermedio.cta': 'Probar gratis 15 días',
+      'secop2.cta-intermedio.cta-alt': 'Contáctanos',
 
       'cta-intermedio.title': '¿Qué necesitas para tu empresa?',
       'cta-intermedio.text': 'Conversemos sin compromiso y encontremos la solución perfecta para tu negocio.',
@@ -797,6 +801,10 @@ const i18n = (() => {
       'secop2.propuesta.desc': 'NO ONE can review the hundreds of processes published daily on SECOP II. With ADAM\'s Intelligent Analyst of Commercial Opportunities, artificial intelligence monitors on your behalf and only alerts you when a real opportunity comes up for your company.',
       'secop2.cta.title': 'Ready to find your next commercial opportunity?',
       'secop2.cta.text': 'Let ADAM\'s intelligent analyst monitor public procurement for you and get the alerts at the exact right moment.',
+      'secop2.cta-intermedio.title': 'Try the Opportunity Analyst free for 15 days',
+      'secop2.cta-intermedio.text': 'Create your account and start receiving alerts, case files and AI answers on SECOP II at no cost for 15 days.',
+      'secop2.cta-intermedio.cta': 'Try free for 15 days',
+      'secop2.cta-intermedio.cta-alt': 'Contact us',
 
       'cta-intermedio.title': 'What does your business need?',
       'cta-intermedio.text': 'Let\'s talk without commitment and find the perfect solution for your business.',
