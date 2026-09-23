@@ -37,7 +37,7 @@ const contactForm = (() => {
 
   const showError = (input, message) => {
     input.classList.add('form__input--error');
-    const errorEl = input.parentElement.querySelector('.form__error');
+    const errorEl = input.closest('.form__group').querySelector('.form__error');
     if (errorEl && message) {
       errorEl.textContent = message;
     }
@@ -45,7 +45,7 @@ const contactForm = (() => {
 
   const clearError = (input) => {
     input.classList.remove('form__input--error');
-    const errorEl = input.parentElement.querySelector('.form__error');
+    const errorEl = input.closest('.form__group').querySelector('.form__error');
     if (errorEl) {
       errorEl.textContent = '';
     }

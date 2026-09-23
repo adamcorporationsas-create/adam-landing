@@ -841,7 +841,7 @@
   display: none;
 }
 
-.form__input--error + .form__error {
+.form__group:has(.form__input--error) .form__error {
   display: block;
 }
 

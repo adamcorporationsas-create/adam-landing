@@ -852,22 +852,10 @@ const i18n = (() => {
 
   const translateFormErrors = (lang) => {
     document.querySelectorAll('.form__error').forEach((el) => {
-      const forInput = el.previousElementSibling;
-      if (!forInput) return;
-      const id = forInput.id;
-      if (id === 'nombre') {
-        el.textContent = get('contacto.form.error-nombre', lang);
-      } else if (id === 'telefono') {
-        el.textContent = get('contacto.form.error-telefono', lang);
-      } else if (id === 'email') {
-        el.textContent = get('contacto.form.error-email', lang);
-      } else if (id === 'empresa') {
-        el.textContent = get('contacto.form.error-empresa', lang);
-      } else if (id === 'mensaje') {
-        el.textContent = get('contacto.form.error-mensaje', lang);
-      } else if (id === 'servicio') {
-        el.textContent = get('contacto.form.error-servicio', lang);
-      }
+      const key = el.getAttribute('data-i18n');
+      if (!key) return;
+      const text = get(key, lang);
+      if (text) el.textContent = text;
     });
   };
 
